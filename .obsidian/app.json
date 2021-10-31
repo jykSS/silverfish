@@ -1,0 +1,12 @@
+{
+  "showLineNumber": true,
+  "readableLineLength": false,
+  "spellcheck": false,
+  "showFrontmatter": true,
+  "smartIndentList": true,
+  "defaultViewMode": "preview",
+  "alwaysUpdateLinks": true,
+  "promptDelete": false,
+  "attachmentFolderPath": "拂水房/消息队列/Kafka/media",
+  "fileSortOrder": "byModifiedTimeReverse"
+}

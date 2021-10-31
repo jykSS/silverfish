@@ -1,0 +1,114 @@
+{
+  "main": {
+    "id": "168dc3e7c80b15ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "05fcf025a135a0d2",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "9f14aee4c4889cba",
+    "type": "split",
+    "children": [
+      {
+        "id": "52b6b778a8829e99",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b758dd4a0993a65d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "1a236b0e387907b2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "07860fe6748ee06b",
+    "type": "split",
+    "children": [
+      {
+        "id": "881414d09322e22b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aba7b3519bf9c93a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b91aa91f9f26765c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "e09f56f035cae594",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "05fcf025a135a0d2",
+  "lastOpenFiles": [
+    "Excalidraw/Drawing 2021-10-31 13.20.14.excalidraw.md",
+    "Excalidraw/Drawing 2021-10-31 13.19.43.excalidraw.md",
+    "Readme.md.md",
+    "拂水房/3 消息队列/基础知识与对比选型.md",
+    "拂水房/4 redis笔记/redis笔记.md",
+    "拂水房/1 Java基础/Java基础.md",
+    "恬裕斋/labuladong的算法小抄2021.pdf",
+    "拂水房/MySQL，Oracle/MySQL/MySQL.md",
+    "拂水房/消息队列/Kafka/Kafka.md",
+    "拂水房/消息队列/rabbitMQ/RabbitMQ.md"
+  ]
+}
