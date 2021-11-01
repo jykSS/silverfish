@@ -309,7 +309,7 @@ OK
 
 ### jedis 介绍
 
-Redis 不仅是使用命令来操作，现在基本上主流的语言都有客户端支持，比如 java、C、C\#、C++、php、Node.js、Go 等。
+Redis 不仅是使用命令来操作，现在基本上主流的语言都有客户端支持，比如 java、C、C\[[、C]]++、php、Node.js、Go 等。
 
 在官方网站里列一些 Java 的客户端，有**Jedis**、Redisson、Jredis、JDBC-Redis、等其中官方推荐使用 Jedis 和 Redisson。在企业中用的最多的就是 Jedis，下面我们就重点学习下 Jedis。
 

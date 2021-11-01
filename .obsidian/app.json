@@ -7,6 +7,7 @@
   "defaultViewMode": "preview",
   "alwaysUpdateLinks": true,
   "promptDelete": false,
-  "attachmentFolderPath": "拂水房/消息队列/Kafka/media",
-  "fileSortOrder": "byModifiedTimeReverse"
+  "attachmentFolderPath": "4 三千道藏/media",
+  "fileSortOrder": "byModifiedTimeReverse",
+  "foldHeading": true
 }

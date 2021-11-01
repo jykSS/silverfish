@@ -1339,7 +1339,7 @@ Key-value 型，不允许重复，同一对象所对应的类
 
 1：哈希表
 
-![](media/d855c739db8d75ef5103481ff565e275.png)
+![](d855c739db8d75ef5103481ff565e275.png)
 
 2：Java7 实现
 
@@ -2513,7 +2513,7 @@ Lock 能完成 synchronized 所实现的所有功能。
 
 synchronized 会自动释放锁，而 Lock 一定要求程序员手工释放，并且必须在 finally 从句中释放。
 
-![](media/e482c910dabb9316e135b72c7b344418.png)
+![](e482c910dabb9316e135b72c7b344418.png)
 
 #### 1：乐观锁与悲观锁
 
@@ -3133,7 +3133,7 @@ public FileOutputStream(String name, boolean append) ：
 
 ⑤UTF-32 编码中，世界上任何字符的存储都需要 4 个字节。
 
-![](media/f994ecb336dec8aaaa2a006f0942d7f0.png)
+![](f994ecb336dec8aaaa2a006f0942d7f0.png)
 
 ## 3：节点流（文件流）
 
@@ -3177,7 +3177,7 @@ Fw.close（）；
 
 缓冲流要套接在相应的节点流之上，
 
-![](media/d07886f7ba5e7289750ca69dd664aad6.png)
+![](d07886f7ba5e7289750ca69dd664aad6.png)
 
 当读取数据时，数据按块读入缓冲区，其后的读操作则直接访问缓冲区
 
@@ -3305,7 +3305,7 @@ Path path = Paths.get("index.html");
 
 ![](6576973a0f025294435c5aa8f553c38f.png)
 
-![](media/cec3afa0689da89e2d4efcf2173ccccd.png)
+![](cec3afa0689da89e2d4efcf2173ccccd.png)
 
 流的一层层封装，装饰者模式
 
@@ -3339,7 +3339,7 @@ ServerSocketChannel
 
 客户端：
 
-![](media/d863dc36d24b47ae883b346604c11341.png)
+![](d863dc36d24b47ae883b346604c11341.png)
 
 BIO 的特点，阻塞
 
@@ -3839,7 +3839,7 @@ Class 的常用方法
 
 当程序主动使用某个类时，如果该类还未被加载到内存中，则系统会通过如下三个步骤对该类进行初始化
 
-![](media/d8d47867eefe91b807080f360125b5d2.png)
+![](d8d47867eefe91b807080f360125b5d2.png)
 
 类加载器的作用：
 
@@ -4555,7 +4555,7 @@ System.out.println(result);  //ancde
 ```java
 List<Employee> employees = Arrays.asList(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10);
 
-Integer total = employees.stream().map(Employee::getAge).reduce(0,Integer::sum);
+Integer total = employees.stream().map(Employee==getAge).reduce(0,Integer==sum);
 System.out.println(total); //346
 ```
 
@@ -4633,7 +4633,7 @@ Stream 查找匹配规则
 Integer total2 = employees
         .parallelStream()
         .map(Employee::getAge)
-        .reduce(0,Integer::sum,Integer::sum);  //注意这里reduce方法有三个参数
+        .reduce(0,Integer==sum,Integer==sum);  //注意这里reduce方法有三个参数
 
 System.out.println(total); //346
 ```
@@ -4775,7 +4775,7 @@ ConcurrentHashMap 同样也变了
 
 官方提供的新特性列表：
 
-https://docs.oracle.com/javase/9/whatsnew/toc.htm\#JSNEW-GUID-C23AFD78-C777-460B-8ACE-58BE5EA681F6
+https://docs.oracle.com/javase/9/whatsnew/toc.htm\[[JSNEW-GUID-C23AFD78-C777-460B-8ACE-58BE5EA681F6]]
 
 或参考 OpenJDK
 
@@ -4793,7 +4793,7 @@ https://docs.oracle.com/javase/9/
 
 ## 1：目录结构的改变
 
-![](media/ffb2eb22dcae8ef40c6853761a415c89.png)
+![](ffb2eb22dcae8ef40c6853761a415c89.png)
 
 ![](25724d7ababb496a843fcce7ca30814b.png)
 
@@ -4819,7 +4819,7 @@ java9demo 模块
 
 ## 3：REPL 工具：jShell 命令
 
-![](media/dc5707368d6100dee1c96a3864bba584.png)
+![](dc5707368d6100dee1c96a3864bba584.png)
 
 REPL（read-evaluate-print-loop）交互式编程环境
 

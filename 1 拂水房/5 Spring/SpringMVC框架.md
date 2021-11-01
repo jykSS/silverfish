@@ -1519,7 +1519,7 @@ src=_"_\${pageContext.request.contextPath}_/js/jquery.min.js"_\>\</script\>
 
 \$(**function**(){
 
-\$("\#testJson").click(**function**(){
+\$("\[[testJson]]").click(**function**(){
 
 \$.ajax({
 

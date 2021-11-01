@@ -144,11 +144,11 @@ Ioc 的实现：
     2.2.3 定义接口与实体类
 
 ```java
-**public interface** SomeService { **void** doSome();
+public interface** SomeService { **void** doSome();
 
   }
 
-**public class** SomeServiceImpl **implements** SomeService {
+public class** SomeServiceImpl **implements** SomeService {
     **public**SomeServiceImpl() {
         **super**();
 		System.**out**.println("SomeServiceImpl无参数构造方法");
@@ -156,7 +156,7 @@ Ioc 的实现：
 
 @Override
 
-**public void** doSome() {
+public void** doSome() {
 		System.**out**.println("====业务方法doSome()===");
   }
 }

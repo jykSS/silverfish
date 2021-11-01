@@ -1204,12 +1204,96 @@ basicReject()：是接收端告诉服务器这个消息我拒绝接收,不处理
 basicNack()：可以一次拒绝 N 条消息，客户端可以设置 basicNack 方法的 multiple 参数为 true。
 
 在 01-rabbitmq-send-java 项目中创建，com.bjpowernode.rabbitmq.ack.Send 类
+```java
+public class Send {
 
-public class Send { public static void main(String[] args) throws IOException, TimeoutException { //创建链接工厂对象 ConnectionFactory factory=new ConnectionFactory(); factory.setHost("192.168.222.128");//设置 RabbitMQ 的主机 IP factory.setPort(5672);//设置 RabbitMQ 的端口号 factory.setUsername("root");//设置访问用户名 factory.setPassword("root");//设置访问密码 Connection connection=null;//定义链接对象 Channel channel=null;//定义通道对象 connection=factory.newConnection();//实例化链接对象 channel=connection.createChannel();//实例化通道对象 String message ="Hello World!3111222"; String exchangeName="myExchange"; channel.queueDeclare("myQueueDirect", true, false, false, null); //指定 Exchange 的类型 //参数 1 为 交换机名称 //参数 2 为交换机类型取值为 direct、queue、topic、headers //参数 3 为是否为持久化消息 true 表示持久化消息 false 表示非持久化 channel.exchangeDeclare(exchangeName, "direct", true); //发送消息到 RabbitMQ //参数 1 我们自定义的交换机名称 //参数 2 自定义的 RoutingKey 值 //参数 3 设置消息的属性，可以通过消息属性设置消息是否是持久化的 //参数 4 具体要发送的消息信息 channel.basicPublish(exchangeName,"myRoutingKeyDirect",null,message.getBytes("UTF-8")); System.out.println("消息发送成功: "+message); // channel.close(); // connection.close(); } }
+ public static void main(String[] args) throws IOException, TimeoutException {
+
+ //创建链接工厂对象
+
+ ConnectionFactory factory=new ConnectionFactory();
+
+ factory.setHost("192.168.222.128");
+
+ //设置 RabbitMQ 的主机 IP
+
+ factory.setPort(5672);
+
+ //设置 RabbitMQ 的端口号
+
+ factory.setUsername("root");
+
+ //设置访问用户名
+
+ factory.setPassword("root");
+
+ //设置访问密码
+
+ Connection connection=null;
+
+ //定义链接对象
+
+ Channel channel=null;
+
+ //定义通道对象
+
+ connection=factory.newConnection();
+
+ //实例化链接对象
+
+ channel=connection.createChannel();
+
+ //实例化通道对象
+
+ String message ="Hello World!3111222";
+
+ String exchangeName="myExchange";
+
+ channel.queueDeclare("myQueueDirect", true, false, false, null);
+
+ //指定 Exchange 的类型
+
+ //参数 1 为 交换机名称
+
+ //参数 2 为交换机类型取值为 direct、queue、topic、headers
+
+ //参数 3 为是否为持久化消息 true 表示持久化消息 false 表示非持久化
+
+ channel.exchangeDeclare(exchangeName, "direct", true);
+
+ //发送消息到 RabbitMQ
+
+ //参数 1 我们自定义的交换机名称
+
+ //参数 2 自定义的 RoutingKey 值
+
+ //参数 3 设置消息的属性，可以通过消息属性设置消息是否是持久化的
+
+ //参数 4 具体要发送的消息信息
+
+ channel.basicPublish(exchangeName,"myRoutingKeyDirect",null,message.getBytes("UTF-8"));
+
+ System.out.println("消息发送成功: "+message);
+
+ channel.close();
+
+ connection.close();
+
+ }
+
+}
+```
+
+
 
 在 01-rabbitmq-receive-java 项目中创建，com.bjpowernode.rabbitmq.ack.Receive 类
 
-public class Receive { public static void main(String[] args) throws IOException, TimeoutException { ConnectionFactory factory = new ConnectionFactory(); factory.setUsername("root"); factory.setPassword("root"); factory.setHost("192.168.222.128"); //建立到代理服务器到连接 Connection conn = factory.newConnection(); //获得信道 final Channel channel = conn.createChannel(); //声明交换器 String exchangeName = "myExchange"; String queueName = "myQueueDirect"; channel.queueDeclare(queueName, true, false, false, null); channel.exchangeDeclare(exchangeName, "direct", true); //声明队列 String routingKey = "myRoutingKeyDirect"; //绑定队列，通过键 hola 将队列和交换器绑定起来 channel.queueBind(queueName, exchangeName, routingKey); //消费消息 boolean autoAck = false; String consumerTag = ""; //接收消息 //参数 1 队列名称 //参数 2 是否自动确认消息 true 表示自动确认 false 表示手动确认 //参数 3 为消息标签 用来区分不同的消费者这列暂时为"" // 参数 4 消费者回调方法用于编写处理消息的具体代码（例如打印或将消息写入数据库） System.out.println(queueName); //开启事务 channel.txSelect(); channel.basicConsume(queueName, autoAck, consumerTag, new DefaultConsumer(channel) { @Override public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException { //获取消息数据 String bodyStr = new String(body, "UTF-8"); System.out.println(bodyStr); //获取当前消息的序列号 long deliveryTag = envelope.getDeliveryTag(); //确认消息 //参数 1 用于确定确认那条消息 //参数 2 false 表示确认这条消息， true 表示确认小于这个值的所有消息 channel.basicAck(deliveryTag, false); } }); //开始提交事务 channel.txCommit() //回滚事务 // channel.txRollback(); // channel.close(); // conn.close(); } }
+```java
+public class Receive { 
+public static void main(String[] args) throws IOException, TimeoutException { 
+ConnectionFactory factory = new ConnectionFactory(); factory.setUsername("root"); factory.setPassword("root"); factory.setHost("192.168.222.128"); //建立到代理服务器到连接 Connection conn = factory.newConnection(); //获得信道 final Channel channel = conn.createChannel(); //声明交换器 String exchangeName = "myExchange"; String queueName = "myQueueDirect"; channel.queueDeclare(queueName, true, false, false, null); channel.exchangeDeclare(exchangeName, "direct", true); //声明队列 String routingKey = "myRoutingKeyDirect"; //绑定队列，通过键 hola 将队列和交换器绑定起来 channel.queueBind(queueName, exchangeName, routingKey); //消费消息 boolean autoAck = false; String consumerTag = ""; //接收消息 //参数 1 队列名称 //参数 2 是否自动确认消息 true 表示自动确认 false 表示手动确认 //参数 3 为消息标签 用来区分不同的消费者这列暂时为"" // 参数 4 消费者回调方法用于编写处理消息的具体代码（例如打印或将消息写入数据库） System.out.println(queueName); //开启事务 channel.txSelect(); channel.basicConsume(queueName, autoAck, consumerTag, new DefaultConsumer(channel) { @Override public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException { //获取消息数据 String bodyStr = new String(body, "UTF-8"); System.out.println(bodyStr); //获取当前消息的序列号 long deliveryTag = envelope.getDeliveryTag(); //确认消息 //参数 1 用于确定确认那条消息 //参数 2 false 表示确认这条消息， true 表示确认小于这个值的所有消息 channel.basicAck(deliveryTag, false); } }); //开始提交事务 channel.txCommit() //回滚事务 // channel.txRollback(); // channel.close(); // conn.close(); } }
+```
+
 
 注意：
 
@@ -1226,14 +1310,14 @@ public class Receive { public static void main(String[] args) throws IOException
 配置模块 02-rabbitmq-springboot-send 的 application.properties 文件添加对 RabbitMQ 的集成
 
 ```yml
-#配置RabbitMQ链接信息
-#配置RabbitMQ服务器的IP地址
+[[配置RabbitMQ]]链接信息
+[[配置RabbitMQ服务器的IP]]地址
 spring.rabbitmq.host=192.168.222.128
-#配置RabbitMQ服务器的端口
+[[配置RabbitMQ]]服务器的端口
 spring.rabbitmq.port=5672
-#配置RabbitMQ服务器的访问账号
+[[配置RabbitMQ]]服务器的访问账号
 spring.rabbitmq.username=root
-#配置RabbitMQ服务器的访问密码
+[[配置RabbitMQ]]服务器的访问密码
 spring.rabbitmq.password=root
 ```
 
@@ -1275,14 +1359,14 @@ public class Application{
 配置模块 02-rabbitmq-springboot-receive 的 application.properties 文件添加对 RabbitMQ 的集成
 
 ```yml
-#配置RabbitMQ链接信息
-#配置RabbitMQ服务器的IP地址
+[[配置RabbitMQ]]链接信息
+[[配置RabbitMQ服务器的IP]]地址
 spring.rabbitmq.host=192.168.222.128
-#配置RabbitMQ服务器的端口
+[[配置RabbitMQ]]服务器的端口
 spring.rabbitmq.port=5672
-#配置RabbitMQ服务器的访问账号
+[[配置RabbitMQ]]服务器的访问账号
 spring.rabbitmq.username=root
-#配置RabbitMQ服务器的访问密码
+[[配置RabbitMQ]]服务器的访问密码
 spring.rabbitmq.password=root
 ```
 
@@ -1761,7 +1845,7 @@ rabbitmqctl add*user root root rabbitmqctl set_user_tags root administrator rabb
 
 修改 SpringBoot 的 application.properties 文件进行集群的继承
 
-#spring.rabbitmq.port=5672 #配置 RabbitMQ 的集群访问地址 spring.rabbitmq.addresses=192.168.222.129:5672,192.168.222.130:5672 #配置 RabbitMQ 服务器的访问账号 spring.rabbitmq.username=root #配置 RabbitMQ 服务器的访问密码 spring.rabbitmq.password=root
+[[spring]].rabbitmq.port=5672 #配置 RabbitMQ 的集群访问地址 spring.rabbitmq.addresses=192.168.222.129:5672,192.168.222.130:5672 #配置 RabbitMQ 服务器的访问账号 spring.rabbitmq.username=root #配置 RabbitMQ 服务器的访问密码 spring.rabbitmq.password=root
 
 ## 高可用保证
 
