@@ -153,7 +153,7 @@ final V putVal(K key, V value, Boolean onlyIfAbsent) {
      * never be used in index calculations because of table bounds.
      */
 static final int spread(int h) {
-    return (h ^ (h >>> 16)) & HASH_BITS;
+    return (h ^ (h >>> 16)) & HASH_BITS; 
 }
 ```
 

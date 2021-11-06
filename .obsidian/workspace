@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "2 脉望馆/沧海拾遗/思维导图.md",
-            "mode": "source"
+            "file": "1 拂水房/3redis笔记/redis笔记.md",
+            "mode": "preview"
           }
         }
       }
@@ -85,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2 脉望馆/沧海拾遗/思维导图.md"
+                "file": "1 拂水房/3redis笔记/redis笔记.md"
               }
             }
           },
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 脉望馆/沧海拾遗/思维导图.md",
+                "file": "1 拂水房/3redis笔记/redis笔记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,20 +110,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "active": "47d9a79e87607098",
   "lastOpenFiles": [
+    "1 拂水房/3redis笔记/redis笔记.md",
+    "2 脉望馆/沧海拾遗/多线程.pdf",
+    "2 脉望馆/沧海拾遗/杂记.pdf",
+    "2 脉望馆/沧海拾遗/mysql相关.pdf",
+    "2 脉望馆/沧海拾遗/控制字符概述-以及移除.pdf",
     "2 脉望馆/沧海拾遗/思维导图.md",
-    "4 三千道藏/media/Pasted image 20211106163730.png",
+    "assert/jvm模型.jpg.md",
     "2 脉望馆/沧海拾遗/ConcurrentHashMap学习文档.md",
-    "1 拂水房/1 Java基础/Java精进加薪课.md",
-    "1 拂水房/16 Netty/Netty学习笔记.md",
-    "1 拂水房/16 Netty/Netty.md",
-    "1 拂水房/11 项目引用的框架/SpringSecurity.md",
-    "4 三千道藏/media/030321a574dfded7bab5a3061bb48304.png",
-    "4 三千道藏/media/image-20201229144640097.png",
-    "4 三千道藏/media/01bea07a0f1ffbc0db2faf39ce1702a2.png"
+    "4 三千道藏/media/Pasted image 20211106163730.png",
+    "1 拂水房/1 Java基础/Java精进加薪课.md"
   ]
 }
