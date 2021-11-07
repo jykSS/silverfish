@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "1 拂水房/3redis笔记/redis笔记.md",
-            "mode": "preview"
+            "file": "Readme.md",
+            "mode": "source"
           }
         }
       }
@@ -85,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 拂水房/3redis笔记/redis笔记.md"
+                "file": "Readme.md"
               }
             }
           },
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 拂水房/3redis笔记/redis笔记.md",
+                "file": "Readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,6 +114,7 @@
   },
   "active": "47d9a79e87607098",
   "lastOpenFiles": [
+    "Readme.md",
     "1 拂水房/3redis笔记/redis笔记.md",
     "2 脉望馆/沧海拾遗/多线程.pdf",
     "2 脉望馆/沧海拾遗/杂记.pdf",
@@ -122,7 +123,6 @@
     "2 脉望馆/沧海拾遗/思维导图.md",
     "assert/jvm模型.jpg.md",
     "2 脉望馆/沧海拾遗/ConcurrentHashMap学习文档.md",
-    "4 三千道藏/media/Pasted image 20211106163730.png",
-    "1 拂水房/1 Java基础/Java精进加薪课.md"
+    "4 三千道藏/media/Pasted image 20211106163730.png"
   ]
 }
