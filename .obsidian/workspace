@@ -1,15 +1,16 @@
 {
   "main": {
-    "id": "168dc3e7c80b15ca",
+    "id": "fb4eb34cc58a8d96",
     "type": "split",
     "children": [
       {
-        "id": "47d9a79e87607098",
+        "id": "a0bfca8f1b8b2a9f",
         "type": "leaf",
         "state": {
-          "type": "pdf",
+          "type": "markdown",
           "state": {
-            "file": "3 恬裕斋/凤凰架构：构建可靠的大型分布式系统.pdf"
+            "file": "README.md",
+            "mode": "preview"
           }
         }
       }
@@ -84,7 +85,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 恬裕斋/凤凰架构：构建可靠的大型分布式系统.pdf"
+                "file": "README.md"
               }
             }
           },
@@ -94,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 恬裕斋/凤凰架构：构建可靠的大型分布式系统.pdf",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,10 +110,13 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
-  "active": "47d9a79e87607098",
+  "active": "a0bfca8f1b8b2a9f",
   "lastOpenFiles": [
+    "README.md",
+    "Excalidraw/Drawing 2021-12-18 20.52.40.excalidraw.md",
     "3 恬裕斋/凤凰架构：构建可靠的大型分布式系统.pdf",
     "2 脉望馆/沧海拾遗/Java/Java研发军团整理《Java面试题手册》V1.0版.pdf",
     "2 脉望馆/旁门左道/redis安装.md",
@@ -120,8 +124,6 @@
     "2 脉望馆/沧海拾遗/docs/b-1面试题总结-Java基础.md",
     "2 脉望馆/沧海拾遗/docs/a-3大部分程序员在面试前很关心的一些问题.md",
     "2 脉望馆/沧海拾遗/docs/a-2程序员简历如何写.md",
-    "2 脉望馆/沧海拾遗/docs/a-1校招社招面试指南.md",
-    "2 脉望馆/沧海拾遗/docs/a-0必看.md",
-    "2 脉望馆/沧海拾遗/杂七杂八/控制字符概述-以及移除.pdf"
+    "2 脉望馆/沧海拾遗/docs/a-1校招社招面试指南.md"
   ]
 }

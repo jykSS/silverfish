@@ -18,5 +18,7 @@
   "pdf-to-markdown-plugin",
   "periodic-notes",
   "templater-obsidian",
-  "cm-editor-syntax-highlight-obsidian"
+  "cm-editor-syntax-highlight-obsidian",
+  "obsidian-dynamic-toc",
+  "obsidian-plugin-toc"
 ]
