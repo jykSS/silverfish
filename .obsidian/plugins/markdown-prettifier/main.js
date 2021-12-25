@@ -10266,7 +10266,7 @@ function metadataWriter(options, input) {
         if (!hasMetadata && options.createHeaderIfNotPresent) {
             metadataNode = {
                 type: "yaml",
-                value: jsYaml.dump(newHeaderTemplateYAML(options.newHeaderTemplate, input)).replace(/\n$/, ""),
+                value: jsYaml.dump(newHeaderTemplateYAML(options.newHeaderTemplate, input)),
             };
             ast.children.unshift(metadataNode);
             hasMetadata = true;
@@ -10275,7 +10275,7 @@ function metadataWriter(options, input) {
             // Only updates if frontmatter already created
             if (options.updateHeader && hasMetadata) {
                 // Write metadata (by reference)
-                metadataNode.value = mergeValues(metadataNode.value, newHeaderTemplateYAML(options.updateHeaderTemplate, input)).replace(/\n$/, "");
+                metadataNode.value = mergeValues(metadataNode.value, newHeaderTemplateYAML(options.updateHeaderTemplate, input));
             }
         }
         if (typeof next === "function") {
@@ -13258,7 +13258,7 @@ function extension$1(config, extension) {
 var inConstruct = 'phrasing';
 var notInConstruct = ['autolink', 'link', 'image', 'label'];
 
-var unsafe$4 = [
+var unsafe$5 = [
   {
     character: '@',
     before: '[+\\-.\\w]',
@@ -13283,7 +13283,7 @@ var unsafe$4 = [
 ];
 
 var toMarkdown$7 = {
-	unsafe: unsafe$4
+	unsafe: unsafe$5
 };
 
 var containerPhrasing$1 = phrasing$1;
@@ -13344,7 +13344,7 @@ function phrasing$1(parent, context, safeOptions) {
   return results.join('')
 }
 
-var unsafe$3 = [{character: '~', inConstruct: 'phrasing'}];
+var unsafe$4 = [{character: '~', inConstruct: 'phrasing'}];
 var handlers$2 = {delete: handleDelete};
 
 handleDelete.peek = peekDelete;
@@ -13361,7 +13361,7 @@ function peekDelete() {
 }
 
 var toMarkdown$6 = {
-	unsafe: unsafe$3,
+	unsafe: unsafe$4,
 	handlers: handlers$2
 };
 
@@ -13859,9 +13859,9 @@ function toMarkdown$5(options) {
   }
 }
 
-var checkBullet_1$1 = checkBullet$1;
+var checkBullet_1 = checkBullet;
 
-function checkBullet$1(context) {
+function checkBullet(context) {
   var marker = context.options.bullet || '*';
 
   if (marker !== '*' && marker !== '+' && marker !== '-') {
@@ -13875,9 +13875,9 @@ function checkBullet$1(context) {
   return marker
 }
 
-var checkListItemIndent_1$1 = checkListItemIndent$1;
+var checkListItemIndent_1 = checkListItemIndent;
 
-function checkListItemIndent$1(context) {
+function checkListItemIndent(context) {
   var style = context.options.listItemIndent || 'tab';
 
   if (style === 1 || style === '1') {
@@ -13969,7 +13969,7 @@ function indentLines$1(value, map) {
   }
 }
 
-var listItem_1 = listItem$3;
+var listItem_1 = listItem$1;
 
 
 
@@ -13977,9 +13977,9 @@ var listItem_1 = listItem$3;
 
 
 
-function listItem$3(node, parent, context) {
-  var bullet = checkBullet_1$1(context);
-  var listItemIndent = checkListItemIndent_1$1(context);
+function listItem$1(node, parent, context) {
+  var bullet = checkBullet_1(context);
+  var listItemIndent = checkListItemIndent_1(context);
   var size;
   var value;
   var exit;
@@ -14017,13 +14017,13 @@ function listItem$3(node, parent, context) {
   }
 }
 
-var unsafe$2 = [{atBreak: true, character: '-', after: '[:|-]'}];
+var unsafe$3 = [{atBreak: true, character: '-', after: '[:|-]'}];
 
 var handlers$1 = {
-  listItem: listItemWithTaskListItem$1
+  listItem: listItemWithTaskListItem
 };
 
-function listItemWithTaskListItem$1(node, parent, context) {
+function listItemWithTaskListItem(node, parent, context) {
   var value = listItem_1(node, parent, context);
   var head = node.children[0];
 
@@ -14039,7 +14039,7 @@ function listItemWithTaskListItem$1(node, parent, context) {
 }
 
 var toMarkdown$4 = {
-	unsafe: unsafe$2,
+	unsafe: unsafe$3,
 	handlers: handlers$1
 };
 
@@ -14573,7 +14573,7 @@ function longestStreak(value, character) {
   return maximum
 }
 
-var unsafe$1 = [
+var unsafe$2 = [
   {character: '\r', inConstruct: ['mathFlowMeta']},
   {character: '\r', inConstruct: ['mathFlowMeta']},
   {character: '$', inConstruct: ['mathFlowMeta', 'phrasing']},
@@ -14646,7 +14646,7 @@ function inlineMathPeek() {
 }
 
 var toMarkdown$2 = {
-	unsafe: unsafe$1,
+	unsafe: unsafe$2,
 	handlers: handlers
 };
 
@@ -26583,7 +26583,7 @@ var inlineCode$2 = inlineCode_1$1;
 var link$2 = link_1$1;
 var linkReference$2 = linkReference_1$1;
 var list$2 = list_1$1;
-var listItem$2 = listItem_1;
+var listItem = listItem_1;
 var paragraph$2 = paragraph_1$1;
 var root$2 = root_1$1;
 var strong$2 = strong_1$1;
@@ -26605,7 +26605,7 @@ var handle$1 = {
 	link: link$2,
 	linkReference: linkReference$2,
 	list: list$2,
-	listItem: listItem$2,
+	listItem: listItem,
 	paragraph: paragraph$2,
 	root: root$2,
 	strong: strong$2,
@@ -26651,7 +26651,7 @@ function joinDefaults$1(left, right, parent, context) {
   }
 }
 
-var unsafe = [
+var unsafe$1 = [
   {
     character: '\t',
     inConstruct: ['codeFencedLangGraveAccent', 'codeFencedLangTilde']
@@ -26783,7 +26783,7 @@ function toMarkdown$1(tree, options) {
   var result;
 
   configure_1$1(context, {
-    unsafe: unsafe,
+    unsafe: unsafe$1,
     join: join$1,
     handlers: handle$1
   });
@@ -26939,28 +26939,28 @@ function flow(parent, context) {
 
 var indentLines_1 = indentLines;
 
-var eol = /\r?\n|\r/g;
+const eol = /\r?\n|\r/g;
 
 function indentLines(value, map) {
-  var result = [];
-  var start = 0;
-  var line = 0;
-  var match;
+    const result = [];
+    let start = 0;
+    let line = 0;
+    let match;
 
-  while ((match = eol.exec(value))) {
-    one(value.slice(start, match.index));
-    result.push(match[0]);
-    start = match.index + match[0].length;
-    line++;
-  }
+    while ((match = eol.exec(value))) {
+        one(value.slice(start, match.index));
+        result.push(match[0]);
+        start = match.index + match[0].length;
+        line++;
+    }
 
-  one(value.slice(start));
+    one(value.slice(start));
 
-  return result.join('')
+    return result.join('')
 
-  function one(value) {
-    result.push(map(value, line, !value));
-  }
+    function one(value) {
+        result.push(map(value, line, !value));
+    }
 }
 
 var blockquote_1 = blockquote$1;
@@ -27015,7 +27015,7 @@ var _break$1 = hardBreak$1;
 
 
 function hardBreak$1(node, _, context, safe) {
-  let index = -1;
+  var index = -1;
 
   while (++index < context.unsafe.length) {
     // If we can’t put eols in this construct (setext headings, tables), use a
@@ -27231,16 +27231,17 @@ var code_1 = code$1;
 
 
 
+// var indentLines = require('../util/indent-lines')
 
 
 function code$1(node, _, context) {
-  const marker = checkFence_1(context);
-  const raw = node.value || '';
-  const suffix = marker === '`' ? 'GraveAccent' : 'Tilde';
-  let value;
-  let sequence;
-  let exit;
-  let subexit;
+  var marker = checkFence_1(context);
+  var raw = node.value || '';
+  var suffix = marker === '`' ? 'GraveAccent' : 'Tilde';
+  var value;
+  var sequence;
+  var exit;
+  var subexit;
 
   if (formatCodeAsIndented_1(node, context)) {
     exit = context.enter('codeIndented');
@@ -27856,110 +27857,6 @@ function list$1(node, _, context) {
   return value
 }
 
-var checkBullet_1 = checkBullet;
-
-function checkBullet(context) {
-  var marker = context.options.bullet || '*';
-
-  if (marker !== '*' && marker !== '+' && marker !== '-') {
-    throw new Error(
-      'Cannot serialize items with `' +
-        marker +
-        '` for `options.bullet`, expected `*`, `+`, or `-`'
-    )
-  }
-
-  return marker
-}
-
-var checkListItemIndent_1 = checkListItemIndent;
-
-function checkListItemIndent(context) {
-  var style = context.options.listItemIndent || 'tab';
-
-  if (style === 1 || style === '1') {
-    return 'one'
-  }
-
-  if (style !== 'tab' && style !== 'one' && style !== 'mixed') {
-    throw new Error(
-      'Cannot serialize items with `' +
-        style +
-        '` for `options.listItemIndent`, expected `tab`, `one`, or `mixed`'
-    )
-  }
-
-  return style
-}
-
-var defaultListItem = listItem$1;
-
-
-
-
-
-
-
-function listItem$1(node, parent, context) {
-  var bullet = checkBullet_1(context);
-  var listItemIndent = checkListItemIndent_1(context);
-  var size;
-  var value;
-  var exit;
-
-  if (parent && parent.ordered) {
-    bullet =
-      (parent.start > -1 ? parent.start : 1) +
-      (context.options.incrementListMarker === false
-        ? 0
-        : parent.children.indexOf(node)) +
-      '.';
-  }
-
-  size = bullet.length + 1;
-  let separator = ' ';
-  if (
-    listItemIndent === 'tab' ||
-    (listItemIndent === 'mixed' && ((parent && parent.spread) || node.spread))
-  ) {
-    separator = '\t';
-    size = bullet.length;
-  }
-
-  exit = context.enter('listItem');
-  value = indentLines_1(containerFlow(node, context), map);
-  exit();
-
-  return value
-
-
-  function map(line, index, blank) {
-
-    if (index) {
-      return (blank ? '' : repeatString(separator, size)) + line
-    }
-
-    return (blank ? bullet : bullet + ' ') + line
-  }
-}
-
-function listItemWithTaskListItemPatch(node, parent, context) {
-  var value = defaultListItem(node, parent, context);
-  var head = node.children[0];
-
-  if (typeof node.checked === 'boolean' && head && head.type === 'paragraph') {
-    value = value.replace(/^(?:[*+-]|\d+\.)([\r\n]| {1,3})/, check);
-  }
-
-  return value
-
-  function check($0) {
-    return $0 + '[' + (node.checked ? 'x' : ' ') + '] '
-  }
-}
-
-var listItemWithTaskListItem = listItemWithTaskListItemPatch;
-
 var paragraph_1 = paragraph$1;
 
 
@@ -28088,7 +27985,6 @@ var inlineCode = inlineCode_1;
 var link = link_1;
 var linkReference = linkReference_1;
 var list = list_1;
-var listItem = listItemWithTaskListItem;
 var paragraph = paragraph_1;
 var root = root_1;
 var strong = strong_1;
@@ -28110,7 +28006,6 @@ var handle = {
 	link: link,
 	linkReference: linkReference,
 	list: list,
-	listItem: listItem,
 	paragraph: paragraph,
 	root: root,
 	strong: strong,
@@ -28156,15 +28051,126 @@ function joinDefaults(left, right, parent, context) {
   }
 }
 
+var unsafe = [
+  {
+    character: '\t',
+    inConstruct: ['codeFencedLangGraveAccent', 'codeFencedLangTilde']
+  },
+  {
+    character: '\r',
+    inConstruct: [
+      'codeFencedLangGraveAccent',
+      'codeFencedLangTilde',
+      'codeFencedMetaGraveAccent',
+      'codeFencedMetaTilde',
+      'destinationLiteral',
+      'headingAtx'
+    ]
+  },
+  {
+    character: '\n',
+    inConstruct: [
+      'codeFencedLangGraveAccent',
+      'codeFencedLangTilde',
+      'codeFencedMetaGraveAccent',
+      'codeFencedMetaTilde',
+      'destinationLiteral',
+      'headingAtx'
+    ]
+  },
+  {
+    character: ' ',
+    inConstruct: ['codeFencedLangGraveAccent', 'codeFencedLangTilde']
+  },
+  // An exclamation mark can start an image, if it is followed by a link or
+  // a link reference.
+  {character: '!', after: '\\[', inConstruct: 'phrasing'},
+  // A quote can break out of a title.
+  {character: '"', inConstruct: 'titleQuote'},
+  // A number sign could start an ATX heading if it starts a line.
+  {atBreak: true, character: '#'},
+  {character: '#', inConstruct: 'headingAtx', after: '(?:[\r\n]|$)'},
+  // Dollar sign and percentage are not used in markdown.
+  // An ampersand could start a character reference.
+  {character: '&', after: '[#A-Za-z]', inConstruct: 'phrasing'},
+  // An apostrophe can break out of a title.
+  {character: "'", inConstruct: 'titleApostrophe'},
+  // A left paren could break out of a destination raw.
+  {character: '(', inConstruct: 'destinationRaw'},
+  {before: '\\]', character: '(', inConstruct: 'phrasing'},
+  // A right paren could start a list item or break out of a destination
+  // raw.
+  {atBreak: true, before: '\\d+', character: ')'},
+  {character: ')', inConstruct: 'destinationRaw'},
+  // An asterisk can start thematic breaks, list items, emphasis, strong.
+  {atBreak: true, character: '*'},
+  {character: '*', inConstruct: 'phrasing'},
+  // A plus sign could start a list item.
+  {atBreak: true, character: '+'},
+  // A dash can start thematic breaks, list items, and setext heading
+  // underlines.
+  {atBreak: true, character: '-'},
+  // A dot could start a list item.
+  {atBreak: true, before: '\\d+', character: '.', after: '(?:[ \t\r\n]|$)'},
+  // Slash, colon, and semicolon are not used in markdown for constructs.
+  // A less than can start html (flow or text) or an autolink.
+  // HTML could start with an exclamation mark (declaration, cdata, comment),
+  // slash (closing tag), question mark (instruction), or a letter (tag).
+  // An autolink also starts with a letter.
+  // Finally, it could break out of a destination literal.
+  {atBreak: true, character: '<', after: '[!/?A-Za-z]'},
+  {character: '<', after: '[!/?A-Za-z]', inConstruct: 'phrasing'},
+  {character: '<', inConstruct: 'destinationLiteral'},
+  // An equals to can start setext heading underlines.
+  {atBreak: true, character: '='},
+  // A greater than can start block quotes and it can break out of a
+  // destination literal.
+  {atBreak: true, character: '>'},
+  {character: '>', inConstruct: 'destinationLiteral'},
+  // Question mark and at sign are not used in markdown for constructs.
+  // A left bracket can start definitions, references, labels,
+  {atBreak: true, character: '['},
+  {character: '[', inConstruct: ['phrasing', 'label', 'reference']},
+  // A backslash can start an escape (when followed by punctuation) or a
+  // hard break (when followed by an eol).
+  // Note: typical escapes are handled in `safe`!
+  {character: '\\', after: '[\\r\\n]', inConstruct: 'phrasing'},
+  // A right bracket can exit labels.
+  {
+    character: ']',
+    inConstruct: ['label', 'reference']
+  },
+  // Caret is not used in markdown for constructs.
+  // An underscore can start emphasis, strong, or a thematic break.
+  {atBreak: true, character: '_'},
+  {before: '[^A-Za-z]', character: '_', inConstruct: 'phrasing'},
+  {character: '_', after: '[^A-Za-z]', inConstruct: 'phrasing'},
+  // A grave accent can start code (fenced or text), or it can break out of
+  // a grave accent code fence.
+  {atBreak: true, character: '`'},
+  {
+    character: '`',
+    inConstruct: [
+      'codeFencedLangGraveAccent',
+      'codeFencedMetaGraveAccent',
+      'phrasing'
+    ]
+  },
+  // Left brace, vertical bar, right brace are not used in markdown for
+  // constructs.
+  // A tilde can start code (fenced).
+  {atBreak: true, character: '~'}
+];
+
 var mdastUtilToMarkdownPatch = toMarkdown;
 
 
 
 
 
-var defaultUnsafe = [];
 
-function toMarkdown (tree, options) {
+
+function toMarkdown(tree, options) {
   var settings = options || {};
   var context = {
     enter: enter,
@@ -28177,7 +28183,7 @@ function toMarkdown (tree, options) {
   var result;
 
   configure_1(context, {
-    unsafe: defaultUnsafe,
+    unsafe: unsafe,
     join: join,
     handlers: handle
   });
@@ -28193,7 +28199,7 @@ function toMarkdown (tree, options) {
     handlers: context.handlers
   });
 
-  result = context.handle(tree, null, context, { before: '\n', after: '\n' });
+  result = context.handle(tree, null, context, {before: '\n', after: '\n'});
 
   if (
     result &&
@@ -28205,25 +28211,25 @@ function toMarkdown (tree, options) {
 
   return result
 
-  function enter (name) {
+  function enter(name) {
     context.stack.push(name);
     return exit
 
-    function exit () {
+    function exit() {
       context.stack.pop();
     }
   }
 }
 
-function invalid (value) {
+function invalid(value) {
   throw new Error('Cannot handle value `' + value + '`, expected node')
 }
 
-function unknown (node) {
+function unknown(node) {
   throw new Error('Cannot handle unknown node `' + node.type + '`')
 }
 
-function joinDefinition (left, right) {
+function joinDefinition(left, right) {
   // No blank line between adjacent definitions.
   if (left.type === 'definition' && left.type === right.type) {
     return 0
@@ -28253,14 +28259,10 @@ function prettifier(content, userOptions, frontMatterData) {
             },
         ];
     }
-    //https://github.com/cristianvasquez/obsidian-prettify/issues/19
-    stringifyOptions.handlers = {
-        listItem: listItemWithTaskListItem
-    };
     processor = processor
-        .use(remarkGfm)
         .use(wikiLinkPlugin)
         .use(remarkMath)
+        .use(remarkGfm)
         // @ts-ignore
         .use(stringify, stringifyOptions);
     return processor.process(content);
@@ -28473,9 +28475,9 @@ var MarkdownPrettifierSettingsTab = /** @class */ (function (_super) {
             .setName("List indent")
             .setDesc("Whether to use small or big spaces to indent lists")
             .addDropdown(function (dropdown) {
-            dropdown.addOption('one', "space");
+            dropdown.addOption('one', "small");
             // dropdown.addOption('mixed', "mixed");
-            dropdown.addOption('tab', "tab");
+            dropdown.addOption('tab', "big");
             dropdown.setValue(String(_this.plugin.settings.listItemIndent))
                 .onChange(function (value) { return __awaiter(_this, void 0, void 0, function () {
                 return __generator(this, function (_a) {

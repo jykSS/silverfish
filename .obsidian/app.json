@@ -9,5 +9,13 @@
   "promptDelete": false,
   "attachmentFolderPath": "4 三千道藏/media",
   "fileSortOrder": "byModifiedTimeReverse",
-  "foldHeading": true
+  "foldHeading": true,
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "useMarkdownLinks": true,
+  "newLinkFormat": "relative"
 }
