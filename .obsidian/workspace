@@ -1,14 +1,16 @@
 {
   "main": {
-    "id": "d0d57fe7437705ac",
+    "id": "fe78deff8f098a48",
     "type": "split",
     "children": [
       {
-        "id": "2eb4b30dc632b750",
+        "id": "149722a3bc1c738b",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "pdf",
+          "state": {
+            "file": "3恬裕斋/凤凰架构：构建可靠的大型分布式系统.pdf"
+          }
         }
       }
     ],
@@ -81,7 +83,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "3恬裕斋/凤凰架构：构建可靠的大型分布式系统.pdf"
+              }
             }
           },
           {
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "3恬裕斋/凤凰架构：构建可靠的大型分布式系统.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,17 +112,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "2eb4b30dc632b750",
+  "active": "149722a3bc1c738b",
   "lastOpenFiles": [
-    "4三千道藏/media/Pasted image 20211223193951.png",
     "3恬裕斋/凤凰架构：构建可靠的大型分布式系统.pdf",
+    "3恬裕斋/图解HTTP .pdf",
+    "3恬裕斋/computer-basic.pdf",
+    "computer-basic.md",
+    "4三千道藏/media/Pasted image 20211223193951.png",
     "2脉望馆/沧海拾遗/杂七杂八/Docker+Jenkins+Nginx+Spring Boot 自动化部署项目.md",
     "2脉望馆/沧海拾遗/杂七杂八/CCE部署.md",
     "4三千道藏/media/Pasted image 20211223195103.png",
     "4三千道藏/media/Pasted image 20211224085830.png",
-    "3恬裕斋/Java并发编程实战.pdf",
-    "1拂水房/09Tomcat与Nginx/Nginx.md",
-    "1拂水房/19Java日志/Java日志.md",
-    "1拂水房/20Hadoop/2.Hadoop（入门）.md"
+    "3恬裕斋/Java并发编程实战.pdf"
   ]
 }

@@ -19,5 +19,8 @@
   "periodic-notes",
   "templater-obsidian",
   "cm-editor-syntax-highlight-obsidian",
-  "obsidian-extract-pdf-highlights"
+  "obsidian-extract-pdf-highlights",
+  "extract-url",
+  "code-block-copy",
+  "url-into-selection"
 ]
