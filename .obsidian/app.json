@@ -8,7 +8,7 @@
   "alwaysUpdateLinks": true,
   "promptDelete": false,
   "attachmentFolderPath": "4 三千道藏/media",
-  "fileSortOrder": "byModifiedTimeReverse",
+  "fileSortOrder": "alphabetical",
   "foldHeading": true,
   "pdfExportSettings": {
     "pageSize": "Letter",
@@ -19,5 +19,7 @@
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "newFileLocation": "current",
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "legacyEditor": false,
+  "livePreview": true
 }
