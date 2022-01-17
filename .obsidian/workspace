@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "84c8d0f3a52f3561",
+        "id": "043045ad93a9dded",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "2脉望馆/沧海拾遗/notes/4. 二维数组中的查找.md",
+            "file": "2脉望馆/沧海拾遗/notes/01ReadMe.md",
             "mode": "preview",
             "source": false
           }
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2脉望馆/沧海拾遗/notes/4. 二维数组中的查找.md"
+                "file": "2脉望馆/沧海拾遗/notes/01ReadMe.md"
               }
             }
           },
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2脉望馆/沧海拾遗/notes/4. 二维数组中的查找.md",
+                "file": "2脉望馆/沧海拾遗/notes/01ReadMe.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,20 +111,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "84c8d0f3a52f3561",
+  "active": "043045ad93a9dded",
   "lastOpenFiles": [
-    "2脉望馆/沧海拾遗/notes/4. 二维数组中的查找.md",
-    "2脉望馆/沧海拾遗/notes/剑指 Offer 题解 - 目录.md",
-    "2脉望馆/沧海拾遗/notes/3. 数组中重复的数字.md",
     "2脉望馆/沧海拾遗/notes/01ReadMe.md",
-    "2脉望馆/沧海拾遗/notes/01.README.md",
+    "2脉望馆/沧海拾遗/notes/Leetcode 题解 - 目录.md",
     "2脉望馆/沧海拾遗/架构相关/凤凰架构笔记.md",
-    "2脉望馆/沧海拾遗/notes/设计模式  - 单例.md",
-    "2脉望馆/沧海拾遗/架构相关/未命名.md",
-    "3恬裕斋/凤凰架构：构建可靠的大型分布式系统.pdf",
-    "computer-basic.md"
+    "1 拂水房/3redis笔记/redis数据结构.md",
+    "1 拂水房/3redis笔记/redis笔记.md",
+    "1 拂水房/2 MySQL，Oracle/Mysql/MySQL.md",
+    "1 拂水房/2 MySQL，Oracle/Mysql/分库分表.md",
+    "1 拂水房/1 Java基础/Java基础.md",
+    "1拂水房/03redis笔记/redis笔记.md",
+    "2脉望馆/沧海拾遗/notes/Java 基础.md"
   ]
 }
