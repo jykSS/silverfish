@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "043045ad93a9dded",
+        "id": "f546c3567c93c237",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "2脉望馆/沧海拾遗/notes/01ReadMe.md",
+            "file": "2脉望馆/旁门左道/Git.md",
             "mode": "preview",
             "source": false
           }
@@ -25,7 +25,7 @@
       {
         "id": "52b6b778a8829e99",
         "type": "tabs",
-        "dimension": 65.24752475247524,
+        "dimension": 73.95833333333333,
         "children": [
           {
             "id": "1a236b0e387907b2",
@@ -56,7 +56,7 @@
       {
         "id": "8454c5e00509f456",
         "type": "tabs",
-        "dimension": 34.75247524752475,
+        "dimension": 26.041666666666664,
         "children": [
           {
             "id": "d6940b82d61c3de6",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2脉望馆/沧海拾遗/notes/01ReadMe.md"
+                "file": "2脉望馆/旁门左道/Git.md"
               }
             }
           },
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2脉望馆/沧海拾遗/notes/01ReadMe.md",
+                "file": "2脉望馆/旁门左道/Git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,17 +113,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "043045ad93a9dded",
+  "active": "f546c3567c93c237",
   "lastOpenFiles": [
-    "2脉望馆/沧海拾遗/notes/01ReadMe.md",
-    "2脉望馆/沧海拾遗/notes/Leetcode 题解 - 目录.md",
-    "2脉望馆/沧海拾遗/架构相关/凤凰架构笔记.md",
-    "1 拂水房/3redis笔记/redis数据结构.md",
-    "1 拂水房/3redis笔记/redis笔记.md",
-    "1 拂水房/2 MySQL，Oracle/Mysql/MySQL.md",
-    "1 拂水房/2 MySQL，Oracle/Mysql/分库分表.md",
-    "1 拂水房/1 Java基础/Java基础.md",
-    "1拂水房/03redis笔记/redis笔记.md",
-    "2脉望馆/沧海拾遗/notes/Java 基础.md"
+    "2脉望馆/旁门左道/Git.md",
+    "1 拂水房/1 Java基础/JVM笔记.md",
+    "Excalidraw/Drawing 2021-12-18 20.52.40.excalidraw.md",
+    "1 拂水房/1 Java基础/三色标记算法.md",
+    "4三千道藏/media/image-20210129205629700.png",
+    "4三千道藏/media/9a9752bb3da05ec18ffe585082378d16.png",
+    "4三千道藏/media/6a2f93b5943140319b38825abfe35147.png",
+    "4三千道藏/media/3cad76a05bc6779f2a9ccfb7ec446eb0.png",
+    "2脉望馆/沧海拾遗/notes/计算机操作系统 - 概述.md",
+    "2脉望馆/沧海拾遗/notes/计算机操作系统.md"
   ]
 }
