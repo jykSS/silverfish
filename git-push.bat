@@ -4,4 +4,3 @@ echo 中文测试
 git add .
 git commit -m "Update"
 git push origin main
-pause
