@@ -23,6 +23,10 @@
 ```bash
 git switch  -c  cfps-*
 ```
+如果存在分支就选择分支,如果不存在就创建分支
+```bash
+ git show-branch  cfps-* &>/dev/null && git switch  cfps-* || git switch -c  cfps-*
+```
 
 扫描文件夹下jar包,根据jar包选分支进行提交推送 (cfps-* 代表各自的分支)
 ```bash  
