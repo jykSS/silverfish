@@ -7,9 +7,11 @@
         "id": "f546c3567c93c237",
         "type": "leaf",
         "state": {
-          "type": "pdf",
+          "type": "markdown",
           "state": {
-            "file": "3恬裕斋/凤凰架构：构建可靠的大型分布式系统.pdf"
+            "file": "2脉望馆/沧海拾遗/advanced-java/docs/high-concurrency/why-mq.md",
+            "mode": "preview",
+            "source": false
           }
         }
       }
@@ -84,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3恬裕斋/凤凰架构：构建可靠的大型分布式系统.pdf"
+                "file": "2脉望馆/沧海拾遗/advanced-java/docs/high-concurrency/why-mq.md"
               }
             }
           },
@@ -94,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3恬裕斋/凤凰架构：构建可靠的大型分布式系统.pdf",
+                "file": "2脉望馆/沧海拾遗/advanced-java/docs/high-concurrency/why-mq.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +115,8 @@
   },
   "active": "f546c3567c93c237",
   "lastOpenFiles": [
+    "2脉望馆/沧海拾遗/advanced-java/docs/high-concurrency/why-mq.md",
+    "2脉望馆/沧海拾遗/advanced-java/README.md",
     "3恬裕斋/凤凰架构：构建可靠的大型分布式系统.pdf",
     "2脉望馆/旁门左道/Git.md",
     "Readme.md",
@@ -120,8 +124,6 @@
     "Excalidraw/Drawing 2021-12-18 20.52.40.excalidraw.md",
     "1 拂水房/1 Java基础/三色标记算法.md",
     "4三千道藏/media/image-20210129205629700.png",
-    "4三千道藏/media/9a9752bb3da05ec18ffe585082378d16.png",
-    "4三千道藏/media/6a2f93b5943140319b38825abfe35147.png",
-    "4三千道藏/media/3cad76a05bc6779f2a9ccfb7ec446eb0.png"
+    "4三千道藏/media/9a9752bb3da05ec18ffe585082378d16.png"
   ]
 }
