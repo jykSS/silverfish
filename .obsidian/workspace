@@ -9,7 +9,13 @@
         "state": {
           "type": "pdf",
           "state": {
+<<<<<<< HEAD
             "file": "3恬裕斋/computer-basic.pdf"
+=======
+            "file": "1 拂水房/2 MySQL，Oracle/Mysql/MySQL.md",
+            "mode": "source",
+            "source": false
+>>>>>>> a149221c0c0ad2eda6fc73608b7c1270a9e49893
           }
         }
       }
@@ -31,7 +37,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "cce部署",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,7 +90,11 @@
             "state": {
               "type": "outline",
               "state": {
+<<<<<<< HEAD
                 "file": "3恬裕斋/computer-basic.pdf"
+=======
+                "file": "1 拂水房/2 MySQL，Oracle/Mysql/MySQL.md"
+>>>>>>> a149221c0c0ad2eda6fc73608b7c1270a9e49893
               }
             }
           },
@@ -94,7 +104,11 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
                 "file": "3恬裕斋/computer-basic.pdf",
+=======
+                "file": "1 拂水房/2 MySQL，Oracle/Mysql/MySQL.md",
+>>>>>>> a149221c0c0ad2eda6fc73608b7c1270a9e49893
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,15 +127,28 @@
   },
   "active": "f546c3567c93c237",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "3恬裕斋/computer-basic.pdf",
     "1 拂水房/7 系统设计/高并发场景下架构设计.md",
     "1 拂水房/7 系统设计/设计解决方案.md",
     "1 拂水房/7 系统设计/接口设计.md",
     "1 拂水房/7 系统设计/架构设计.md",
+=======
+    "1 拂水房/2 MySQL，Oracle/Mysql/MySQL.md",
+    "4三千道藏/media/Pasted image 20220117163113.png",
+    "4三千道藏/media/53867db086b0bde31ad0bf067185b4ee.png",
+    "Excalidraw/Drawing 2022-03-04 04.37.53.excalidraw.md",
+    "2脉望馆/沧海拾遗/docs/d-1-mysql.md",
+>>>>>>> a149221c0c0ad2eda6fc73608b7c1270a9e49893
     "2脉望馆/沧海拾遗/advanced-java/docs/high-concurrency/why-mq.md",
     "2脉望馆/沧海拾遗/advanced-java/README.md",
+    "1 拂水房/1 Java基础/Java基础.md",
     "3恬裕斋/凤凰架构：构建可靠的大型分布式系统.pdf",
+<<<<<<< HEAD
     "2脉望馆/旁门左道/Git.md",
     "Readme.md"
+=======
+    "2脉望馆/旁门左道/Git.md"
+>>>>>>> a149221c0c0ad2eda6fc73608b7c1270a9e49893
   ]
 }
