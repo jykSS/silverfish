@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "f20f346169ea371f",
+        "id": "4be13dd0a0bfd3ed",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "1 拂水房/3redis笔记/redis笔记.md",
+            "mode": "preview",
+            "source": false
+          }
         }
       }
     ],
@@ -81,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "1 拂水房/3redis笔记/redis笔记.md"
+              }
             }
           },
           {
@@ -90,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "1 拂水房/3redis笔记/redis笔记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,17 +113,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "f20f346169ea371f",
+  "active": "4be13dd0a0bfd3ed",
   "lastOpenFiles": [
-    "3恬裕斋/SpringCloudAlibaba笔记.pdf",
+    "1 拂水房/3redis笔记/redis笔记.md",
+    "4三千道藏/media/微信图片_20220325091504.png",
+    "4三千道藏/media/微信图片_20220325091526.png",
+    "3恬裕斋/谈谈Spring用到了哪些设计模式- 掘金.pdf",
     "3恬裕斋/Java 工程师进阶知识完全扫盲.pdf",
+    "3恬裕斋/SpringCloudAlibaba笔记.pdf",
     "3恬裕斋/computer-basic.pdf",
     "1 拂水房/7 系统设计/高并发场景下架构设计.md",
     "1 拂水房/7 系统设计/设计解决方案.md",
-    "1 拂水房/7 系统设计/接口设计.md",
-    "1 拂水房/7 系统设计/架构设计.md",
-    "2脉望馆/沧海拾遗/advanced-java/docs/high-concurrency/why-mq.md",
-    "2脉望馆/沧海拾遗/advanced-java/README.md",
-    "3恬裕斋/凤凰架构：构建可靠的大型分布式系统.pdf"
+    "1 拂水房/7 系统设计/接口设计.md"
   ]
 }
