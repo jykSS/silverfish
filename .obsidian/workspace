@@ -4,13 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f546c3567c93c237",
+        "id": "f20f346169ea371f",
         "type": "leaf",
         "state": {
-          "type": "pdf",
-          "state": {
-            "file": "3恬裕斋/SpringCloudAlibaba笔记.pdf"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -83,9 +81,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "3恬裕斋/SpringCloudAlibaba笔记.pdf"
-              }
+              "state": {}
             }
           },
           {
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3恬裕斋/SpringCloudAlibaba笔记.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +106,7 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "f546c3567c93c237",
+  "active": "f20f346169ea371f",
   "lastOpenFiles": [
     "3恬裕斋/SpringCloudAlibaba笔记.pdf",
     "3恬裕斋/Java 工程师进阶知识完全扫盲.pdf",
