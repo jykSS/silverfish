@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "4be13dd0a0bfd3ed",
+        "id": "c3e4351f0bac023f",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "1 拂水房/3redis笔记/redis笔记.md",
-            "mode": "preview",
+            "file": "1 拂水房/5 Spring/1 Spring框架.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -33,7 +33,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "![image-20210225094938987](image-20210225094938987.png)",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 拂水房/3redis笔记/redis笔记.md"
+                "file": "1 拂水房/5 Spring/1 Spring框架.md"
               }
             }
           },
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 拂水房/3redis笔记/redis笔记.md",
+                "file": "1 拂水房/5 Spring/1 Spring框架.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,17 +113,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "4be13dd0a0bfd3ed",
+  "active": "c3e4351f0bac023f",
   "lastOpenFiles": [
+    "1 拂水房/5 Spring/1 Spring框架.md",
     "1 拂水房/3redis笔记/redis笔记.md",
-    "4三千道藏/media/微信图片_20220325091504.png",
-    "4三千道藏/media/微信图片_20220325091526.png",
-    "3恬裕斋/谈谈Spring用到了哪些设计模式- 掘金.pdf",
-    "3恬裕斋/Java 工程师进阶知识完全扫盲.pdf",
-    "3恬裕斋/SpringCloudAlibaba笔记.pdf",
-    "3恬裕斋/computer-basic.pdf",
-    "1 拂水房/7 系统设计/高并发场景下架构设计.md",
-    "1 拂水房/7 系统设计/设计解决方案.md",
-    "1 拂水房/7 系统设计/接口设计.md"
+    "4三千道藏/media/image-20210225094938987.png",
+    "1 拂水房/17 lucene笔记/lucene笔记.md",
+    "1 拂水房/18 项目整合篇/项目整合篇.md",
+    "1 拂水房/1 Java基础/Java基础.md",
+    "1 拂水房/1 Java基础/Java精进加薪课.md",
+    "3恬裕斋/《对线面试官》Java程序员面试宝典.pdf",
+    "1 拂水房/10 面经/58同城.md",
+    "1 拂水房/10 面经/阿里文娱.md"
   ]
 }
