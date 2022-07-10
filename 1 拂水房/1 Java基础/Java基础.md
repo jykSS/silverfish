@@ -166,7 +166,7 @@ Instanceof：用来指出对象是否是特定类或接口或该类子类的一�
 
 类中的数据成员和成员函数据具有的访问权限包括：public、private、protect、default（包访问权限）
 
-![image-20201208223420158](image-20201208223420158.png)
+![image-20201208223420158](../../4三千道藏/media/../../4三千道藏/media/image-20201208223420158.png)
 
 public 所有类可见
 
@@ -184,7 +184,7 @@ priavte 本类可见
 
 **1）八种基本数据类型**
 
-![image-20201125195254176](image-20201125195254176.png)
+![image-20201125195254176](../../4三千道藏/media/../../4三千道藏/media/image-20201125195254176.png)
 
 数据范围与字节数不一定相关，float 数据范围比 long 更加广泛，但是 float 是 4 字节，long 是 8 字节。
 
@@ -305,11 +305,11 @@ void foo(StringBuilder builder) {
 foo(sb); // sb 被改变了，变成了"iphone4"
 ```
 
-![image-20210305103735858](image-20210305103735858.png)
+![image-20210305103735858](../../4三千道藏/media/image-20210305103735858.png)
 
 builder.append("4")之后
 
-![image-20210305103755951](image-20210305103755951.png)
+![image-20210305103755951](../../4三千道藏/media/image-20210305103755951.png)
 
 ```java
 第四个例子：提供了改变自身方法的引用类型，但是不使用，而是使用赋值运算符。
@@ -320,11 +320,11 @@ void foo(StringBuilder builder) {
 foo(sb); // sb 没有被改变，还是 "iphone"
 ```
 
-![image-20210305103906175](image-20210305103906175.png)
+![image-20210305103906175](../../4三千道藏/media/image-20210305103906175.png)
 
 builder = new StringBuilder("ipad"); 之后
 
-![image-20210305103922424](image-20210305103922424.png)
+![image-20210305103922424](../../4三千道藏/media/image-20210305103922424.png)
 
 ## 3：流程控制
 
@@ -927,7 +927,7 @@ System.arraycopy 方法具有 5 个参数，含义分别为：
 | 4        | destPos  | int      | 目标数组索引起始位置 |
 | 5        | length   | int      | 复制元素个数         |
 
-![4adcb6d120cd6b3542a041feb730856d.png](4adcb6d120cd6b3542a041feb730856d.png)
+![4adcb6d120cd6b3542a041feb730856d.png](../../4三千道藏/media/4adcb6d120cd6b3542a041feb730856d.png)
 
 2：equals（）和==
 
@@ -949,7 +949,7 @@ Equals 方法用来比较对象时，若没有对 equals 进行重写，其都�
 
 如果两对象的 hashCode()值相等，它们的 equals 不一定相等（hash 冲突啦）
 
-![219b1f57a4f3764f0a5010ef0e32ee60.png](219b1f57a4f3764f0a5010ef0e32ee60.png)
+![219b1f57a4f3764f0a5010ef0e32ee60.png](../../4三千道藏/media/219b1f57a4f3764f0a5010ef0e32ee60.png)
 
 3：基本数据类型与自动拆箱
 
@@ -1057,11 +1057,11 @@ List.toArray(); Arrays.asList(array);
 
 # 三：集合
 
-![img](1174906-20180906205331943-217494251.png)
+![img](../../4三千道藏/media/1174906-20180906205331943-217494251.png)
 
 Vector、Hashtable、Stack 都是线程安全的，而像 HashMap 则是非线程安全的
 
-![](aee52db590b93b037e2b7505e4c2d785.png)
+![](../../4三千道藏/media/aee52db590b93b037e2b7505e4c2d785.png)
 
 Java. util. concurrent 并发包的出现，ConcurrentHashMap 安全了
 
@@ -1287,7 +1287,7 @@ HashSet 不能保证元素的排列顺序，HashSet 不是线程安全的，集�
 
 简单的来说，哈希表是由数组+链表+红黑树（JDK1.8 增加了红黑树部分）实现的
 
-![哈希流程图](哈希流程图.png)
+![哈希流程图](../../4三千道藏/media/哈希流程图.png)
 
 HashSet 线程不安全，同样也可以使用 CopyOnWriteArraySet，其底层依然还是使用 CopyOnWriteArrayList 实现的。
 
@@ -1339,7 +1339,7 @@ Key-value 型，不允许重复，同一对象所对应的类
 
 1：哈希表
 
-![](d855c739db8d75ef5103481ff565e275.png)
+![](../../4三千道藏/media/d855c739db8d75ef5103481ff565e275.png)
 
 2：Java7 实现
 
@@ -1357,7 +1357,7 @@ Int I 变成 0 到 n-1 的方法：取余，使用 Hash&（length-1）（全 1�
 
 Transfer 函数：把原本的遍历一遍，计算新的然后再计算新的里面
 
-![](5770eaf8cadf6b9b49d0952201c62449.png)
+![](../../4三千道藏/media/5770eaf8cadf6b9b49d0952201c62449.png)
 
 Java7 的实现容易会出现死锁，它是线程不安全的
 
@@ -1365,11 +1365,11 @@ Java7 的实现容易会出现死锁，它是线程不安全的
 
 1.7 的问题
 
-![](358040d977f8916c2d0e282bc4dea0f6.png)
+![](../../4三千道藏/media/358040d977f8916c2d0e282bc4dea0f6.png)
 
 1.8
 
-![](a00ba0473314594d9f664b090fe43b64.png)
+![](../../4三千道藏/media/a00ba0473314594d9f664b090fe43b64.png)
 
 不再是链表，用的是红黑树（二叉平衡树），re 的时候保持顺序
 
@@ -1428,7 +1428,7 @@ HashMap 类中有一个非常重要的字段，就是 Node[] table，即哈希�
 
 HashMap 中关于红黑树的三个关键参数：
 
-![](587309242992088d200c973008ad2bce.png)
+![](../../4三千道藏/media/587309242992088d200c973008ad2bce.png)
 
 当比值超过负载因子之后，HashMap 就会进行 rehash 操作来进行扩容。
 
@@ -1489,7 +1489,7 @@ static final int hash(Object key) {   //jdk1.8 & jdk1.7
 
 当 length 总是 2 的 n 次方时，h& (length-1)运算等价于对 length 取模，也就是 h%length，但是&比%具有更高的效率。
 
-![](cbd0fb60a87957476f708c7b1ea32132.png)
+![](../../4三千道藏/media/cbd0fb60a87957476f708c7b1ea32132.png)
 
 **Resize**
 
@@ -1511,7 +1511,7 @@ Q：HashMap 为什么是线程不安全的，怎么解决呢？
 
 （2）另外一个比较明显的线程不安全的问题是 HashMap 的 get 操作可能因为 resize 而引起死循环（cpu100%）
 
-![img](7853175-ab75cd3738471507.png)
+![img](../../4三千道藏/media/7853175-ab75cd3738471507.png)
 
 解决：
 
@@ -1757,7 +1757,7 @@ Map.entrySet 迭代器会生成 EntryIterator,其返回的实例是一个包含 
 
 异常体系
 
-![异常体系](异常体系-1607604130815.png)
+![异常体系](../../4三千道藏/media/异常体系-1607604130815.png)
 
 1：Exception 和 Error 有什么区别？
 
@@ -1765,7 +1765,7 @@ Exception 和 Error 都是 Throwable 的子类。Exception 用于用户程序可
 
 分类
 
-![异常的分类](异常的分类.png)
+![异常的分类](../../4三千道藏/media/异常的分类.png)
 
 -
 
@@ -1833,7 +1833,7 @@ If（num==0）{}
 
 方式一：try-catch-finally
 
-![](2efce8d7b967809c4bf071f1792cf55d.png)
+![](../../4三千道藏/media/2efce8d7b967809c4bf071f1792cf55d.png)
 
 捕获异常的有关信息：
 
@@ -1844,7 +1844,7 @@ getMessage() 获取异常信息，返回字符串
 printStackTrace()
 获取异常类名和异常信息，以及异常出现在程序中的位置。返回值 void。
 
-![](8ad7e9991f083c26998a74c0c25b0d51.png)
+![](../../4三千道藏/media/8ad7e9991f083c26998a74c0c25b0d51.png)
 
 方式二：throws + 异常类型
 
@@ -1947,7 +1947,7 @@ volatile
 
 当线程被创建并启动以后，它既不是一启动就进入了执行状态，也不是一直处于执行状态。在线程的生命周期中，枚举中给出了六种线程状态：
 
-![image-20201210211927230](image-20201210211927230.png)
+![image-20201210211927230](../../4三千道藏/media/image-20201210211927230.png)
 
 **就绪(Runnable):**线程准备运行，不一定立马就能开始执行。
 
@@ -1963,7 +1963,7 @@ volatile
 
 **死亡(Dead)：**线程完成了执行
 
-![img](1174906-20180716200023341-515113887.png)多个线程处理同一个资源，需要线程间通信解决线程对资源的占用，避免对同一资源争夺。及引入等待唤醒机制（wait（），notify（））
+![img](../../4三千道藏/media/1174906-20180716200023341-515113887.png)多个线程处理同一个资源，需要线程间通信解决线程对资源的占用，避免对同一资源争夺。及引入等待唤醒机制（wait（），notify（））
 
 (a）wait（）方法:线程调用 wait()方法，**释放**它对锁的拥有权，然后**等待另外的线程来通知它**（通知的方式是 notify()或者 notifyAll()方法），这样它才能重新获得锁的拥有权和恢复执行。
 
@@ -2071,7 +2071,7 @@ ThreadLocal 与 Synchronized 的区别：
 - Thread 内部的 Map 是由 ThreadLocal 维护的，由 ThreadLocal 负责向 map 获取和设置线程的变量值。
 - 对于不同的线程，每次获取副本值时，别的线程并不能获取到当前线程的副本值，形成了副本的隔离，互不干扰。
 
-![image-20210118133335687](image-20210118133335687.png)
+![image-20210118133335687](../../4三千道藏/media/image-20210118133335687.png)
 
 面这张图详细的揭示了 ThreadLocal 和 Thread 以及 ThreadLocalMap 三者的关系。
 
@@ -2509,11 +2509,11 @@ Join（）：
 
 Lock 能完成 synchronized 所实现的所有功能。
 
-![](aa4cefc27d5e700122bcd3de4517a563.png)
+![](../../4三千道藏/media/aa4cefc27d5e700122bcd3de4517a563.png)
 
 synchronized 会自动释放锁，而 Lock 一定要求程序员手工释放，并且必须在 finally 从句中释放。
 
-![](e482c910dabb9316e135b72c7b344418.png)
+![](../../4三千道藏/media/e482c910dabb9316e135b72c7b344418.png)
 
 #### 1：乐观锁与悲观锁
 
@@ -2577,7 +2577,7 @@ Monitor 是线程私有的数据结构，每一个线程都有一个可用 monit
 
 所以目前锁一共有 4 种状态，级别从低到高依次是：无锁、偏向锁、轻量级锁和重量级锁。锁状态只能升级不能降级。
 
-![img](2018112210411172.png)
+![img](../../4三千道藏/media/2018112210411172.png)
 
 **无锁**
 
@@ -2585,7 +2585,7 @@ Monitor 是线程私有的数据结构，每一个线程都有一个可用 monit
 
 无锁的特点就是修改操作在循环内进行，线程会不断的尝试修改共享资源。如果没有冲突就修改成功并退出，否则就会继续循环尝试。如果有多个线程修改同一个值，必定会有一个线程能修改成功，而其他修改失败的线程会不断重试直到修改成功。上面我们介绍的 CAS 原理及应用即是无锁的实现。无锁无法全面代替有锁，但无锁在某些场合下的性能是非常高的。
 
-![](7b060f3a1d4b3f076a9610a2975b2655.png)
+![](../../4三千道藏/media/7b060f3a1d4b3f076a9610a2975b2655.png)
 
 **偏向锁**
 
@@ -2615,7 +2615,7 @@ Monitor 是线程私有的数据结构，每一个线程都有一个可用 monit
 
 升级为重量级锁时，锁标志的状态值变为“10”，此时 MarkWord 中存储的是指向重量级锁的指针，此时等待锁的线程都会进入阻塞状态。
 
-![image-20210117171557200](image-20210117171557200.png)
+![image-20210117171557200](../../4三千道藏/media/image-20210117171557200.png)
 
 偏向锁通过对比 Mark Word 解决加锁问题，避免执行 CAS 操作。而轻量级锁是通过用 CAS 操作和自旋来解决加锁问题，避免线程阻塞和唤醒而影响性能。重量级锁是将除了拥有锁的线程以外的线程都阻塞。
 
@@ -2666,7 +2666,7 @@ ReentrantLock 和 NonReentrantLock 都继承父类 AQS，其父类 AQS 中维护
 
 释放锁时，可重入锁同样先获取当前 status 的值，在当前线程是持有锁的线程的前提下。如果 status-1 == 0，则表示当前线程所有重复获取锁的操作都已经执行完毕，然后该线程才会真正释放锁。而非可重入锁则是在确定当前线程是持有锁的线程之后，直接将 status 置为 0，将锁释放。
 
-![image-20210117172425489](image-20210117172425489.png)
+![image-20210117172425489](../../4三千道藏/media/image-20210117172425489.png)
 
 #### 6：独享锁（排它锁）与共享锁
 
@@ -2734,7 +2734,7 @@ AQS 就是基于 CLH 队列，用 volatile 修饰共享变量 state，线程通�
 
 实现了 AQS 的锁有：自旋锁、互斥锁、读写锁、条件变量、信号量、栅栏都是 AQS 的衍生物，具体实现如下
 
-![image-20200717210530013](image-20200717210530013.png)
+![image-20200717210530013](../../4三千道藏/media/image-20200717210530013.png)
 
 如上图所示，AQS 维护了一个 volatile int state 的变量 和 一个 FIFO 线程等待队列，多线程争用资源被阻塞的时候，就会进入这个队列中。state 就是共享资源，其访问方式有如下三种：
 
@@ -2803,7 +2803,7 @@ JUC 包增加了并发编程中常用的工具类，用于定义类似于线程�
 
 JUC 包下的容器类分为两部分，一部分是**并发集合类**，一部分是**并发队列类**，
 
-![在这里插入图片描述](media/20210306105116240.png)
+![在这里插入图片描述](../../4三千道藏/media/media/20210306105116240.png)
 
 #### synchronized
 
@@ -2853,7 +2853,7 @@ Q：**synchronized 和 volatile 的区别是什么？**
 
 原子类一览：将普通变量升级为原子变量，主要是 AtomicIntegerFieldUpdater<T>，在高并发情况下，LongAdder(累加器)比 AtomicLong 原子操作效率更高，LongAdder 累加器是 java8 新加入的
 
-![image-20210125215805643](image-20210125215805643.png)
+![image-20210125215805643](../../4三千道藏/media/image-20210125215805643.png)
 
 2：原子变量与 CAS 算法
 
@@ -2990,7 +2990,7 @@ synchronized 控制同步的时候，可以配合 Object 的 wait(),notify(),not
 
 一个 Condition 包含一个等待队列，Condition 拥有节点（firstWaiter）和尾节点（lastWaiter），当前线程调用 Condition.await()方法，将会以当前线程构造节点，并将节点从尾部加入等待队列。
 
-![image-20210302094438500](image-20210302094438500.png)
+![image-20210302094438500](../../4三千道藏/media/image-20210302094438500.png)
 
 调用 Condition 的 signal 方法，将会唤醒在等待队列中等待时间最久的节点（首节点—），在唤醒节点之前，会将节点移动同步队列中。
 
@@ -3029,7 +3029,7 @@ java.util.concurrent.BlockingQueue 接口有以下阻塞队列的实现：
 
 提供了阻塞的 take() 和 put() 方法：如果队列为空 take() 将阻塞，直到队列中有内容；如果队列为满 put() 将阻塞，直到队列有空闲位置
 
-![image-20200316154442756](media/image-20200316154442756.png)
+![image-20200316154442756](../../4三千道藏/media/media/image-20200316154442756.png)
 
 如果提交任务是，线程池队列已满，这时会发生什么？
 
@@ -3082,9 +3082,9 @@ java.util.concurrent.BlockingQueue 接口有以下阻塞队列的实现：
 
 按流的角色不同分为：节点流（直接从数据源或目的地读写数据），处理流（连接在已存在的流（节点流或处理流）之上，通过对数据的处理为程序提供更为强大的读写功能）
 
-![](208d25c522bc0854a1fe39df90d3195b.png)
+![](../../4三千道藏/media/208d25c522bc0854a1fe39df90d3195b.png)
 
-![](a8eaacfe9ace5bf858124f5a1755259c.png)
+![](../../4三千道藏/media/a8eaacfe9ace5bf858124f5a1755259c.png)
 
 #### 字节流：
 
@@ -3133,7 +3133,7 @@ public FileOutputStream(String name, boolean append) ：
 
 ⑤UTF-32 编码中，世界上任何字符的存储都需要 4 个字节。
 
-![](f994ecb336dec8aaaa2a006f0942d7f0.png)
+![](../../4三千道藏/media/f994ecb336dec8aaaa2a006f0942d7f0.png)
 
 ## 3：节点流（文件流）
 
@@ -3173,11 +3173,11 @@ Fw.close（）；
 
 为了提高数据读写速度，提供了带缓冲功能的流类，在使用这些流类时，会创建一个内部缓冲区数据，默认 8192 字节（8Kb）的缓冲区
 
-![](2dd97e78262f25501f0a62f72e29dae0.png)
+![](../../4三千道藏/media/2dd97e78262f25501f0a62f72e29dae0.png)
 
 缓冲流要套接在相应的节点流之上，
 
-![](d07886f7ba5e7289750ca69dd664aad6.png)
+![](../../4三千道藏/media/d07886f7ba5e7289750ca69dd664aad6.png)
 
 当读取数据时，数据按块读入缓冲区，其后的读操作则直接访问缓冲区
 
@@ -3195,7 +3195,7 @@ flush()方法的使用：手动将 buffer 中内容写入文件
 
 提供字节流和字符流之间的转换
 
-![](8356b029a0190c0477fb17f253c4b3ff.png)
+![](../../4三千道藏/media/8356b029a0190c0477fb17f253c4b3ff.png)
 
 InputStreamReader：字节输入流按指定字符集转换为字符的输入流
 
@@ -3223,7 +3223,7 @@ PrintStream 和 PrintWriter 的输出不会抛出 IOException 异常
 
 DataInputStream 和 DataOutputStream，分别套接在 InputStream 和 OutputStream 子类的流上。
 
-![](4f7d1cf48260d1a695f885d1b26288b8.png)
+![](../../4三千道藏/media/4f7d1cf48260d1a695f885d1b26288b8.png)
 
 ## 9：对象流
 
@@ -3262,7 +3262,7 @@ RandomAccessFile 类
 
 Block IO：jdk 最早抽象出的 IO 体系，jdk1.0 的 io 体系是阻塞的。
 
-![](0e7a42d815d00161b1e2aa4913b78d9d.png)
+![](../../4三千道藏/media/0e7a42d815d00161b1e2aa4913b78d9d.png)
 
 ## 11：NIO
 
@@ -3303,9 +3303,9 @@ import java.nio.file.Paths;
 Path path = Paths.get("index.html");
 ```
 
-![](6576973a0f025294435c5aa8f553c38f.png)
+![](../../4三千道藏/media/6576973a0f025294435c5aa8f553c38f.png)
 
-![](cec3afa0689da89e2d4efcf2173ccccd.png)
+![](../../4三千道藏/media/cec3afa0689da89e2d4efcf2173ccccd.png)
 
 流的一层层封装，装饰者模式
 
@@ -3335,11 +3335,11 @@ ServerSocketChannel
 
 服务器端：
 
-![](b9d51f9a68aba8e94e6c63e80cf3207f.png)
+![](../../4三千道藏/media/b9d51f9a68aba8e94e6c63e80cf3207f.png)
 
 客户端：
 
-![](d863dc36d24b47ae883b346604c11341.png)
+![](../../4三千道藏/media/d863dc36d24b47ae883b346604c11341.png)
 
 BIO 的特点，阻塞
 
@@ -3351,11 +3351,11 @@ BIO 的特点，阻塞
 
 设置不阻塞
 
-![](a0e893b04482db103e1a2fc0828d04c0.png)
+![](../../4三千道藏/media/a0e893b04482db103e1a2fc0828d04c0.png)
 
 设置为非阻塞：如果没人连接，打印，看已经连接的有没有发送
 
-![](ae6c3694ae12085ba1da49ff670043cd.png)
+![](../../4三千道藏/media/ae6c3694ae12085ba1da49ff670043cd.png)
 
 如果有人连接，放入 list，遍历 list 看他有没有发送数据
 
@@ -3365,7 +3365,7 @@ ServerSocket 变成 ServerSocketChannel
 
 Socket 变成 SocketChannel
 
-![](6e4fe3611af22827ad28b69ffb2e1b9b.png)
+![](../../4三千道藏/media/6e4fe3611af22827ad28b69ffb2e1b9b.png)
 
 13：AIO
 
@@ -3401,7 +3401,7 @@ IO 是面向流的，NIO 是面向缓冲区的
 
 ### linux 通信
 
-![img](1697781-20200327092249958-278747055.png)
+![img](../../4三千道藏/media/1697781-20200327092249958-278747055.png)
 
 文件描述符是内核提供给用户来安全操作文件的标识。
 
@@ -3821,7 +3821,7 @@ method.invoke(object, 4);   //就是这里的invoke方法
 
 加载完类后，在堆内存的方法区就产生一个 Class 类型的对象（一个类只有一个 class 对象）
 
-![](b6fff231446e38a2ad9db2130735db5a.png)
+![](../../4三千道藏/media/b6fff231446e38a2ad9db2130735db5a.png)
 
 ### 1：Class 实例
 
@@ -3833,13 +3833,13 @@ Public final Class getClass（）
 
 Class 的常用方法
 
-![](834d3b522f315b15109e96970ac52f5a.png)
+![](../../4三千道藏/media/834d3b522f315b15109e96970ac52f5a.png)
 
 ### 2：类的加载与 ClassLoader
 
 当程序主动使用某个类时，如果该类还未被加载到内存中，则系统会通过如下三个步骤对该类进行初始化
 
-![](d8d47867eefe91b807080f360125b5d2.png)
+![](../../4三千道藏/media/d8d47867eefe91b807080f360125b5d2.png)
 
 类加载器的作用：
 
@@ -3892,7 +3892,7 @@ Thread.start();//启动线程，调用线程的 run();
 
 方法：
 
-![](5de93b4622394f69cbcf34af5cfbf292.png)
+![](../../4三千道藏/media/5de93b4622394f69cbcf34af5cfbf292.png)
 
 ## 4：注解 Annotation
 
@@ -4118,7 +4118,7 @@ TreeSet<Integer> set = new TreeSet<>(new Comparator<Integer>() {
 
 ### 1.3：四大内置函数
 
-![image-20201122142257998](image-20201122142257998.png)
+![image-20201122142257998](../../4三千道藏/media/image-20201122142257998.png)
 
 函数式接口，只包含一个方法的特殊接口。
 
@@ -4225,13 +4225,13 @@ lambdas 表达式可以捕获外围词法的变量，但是方法引用不行，
 
 Stream 是 Java8 中处理集合的关键抽象概念，他可以指定你希望对集合进行的操作，可以执行非常复杂的查找，过滤和映射数据等操作。
 
-![image-20201122162048510](image-20201122162048510.png)
+![image-20201122162048510](../../4三千道藏/media/image-20201122162048510.png)
 
 接口的抽象方法的形参表，返回类型需要和调用的类方法的形参表，返回类型保持一致
 
 <img src="media/image-20201128165317600.png" alt="image-20201128165317600" style="zoom:50%;" />
 
-![image-20201128195809722](image-20201128195809722.png)
+![image-20201128195809722](../../4三千道藏/media/image-20201128195809722.png)
 
 ### 2.1：获取流
 
@@ -4451,7 +4451,7 @@ List<String> uniqueAnimals = Stream.of("Monkey", "Lion", "Giraffe", "Lemur", "Li
 
 并行不要用有状态操作
 
-![image-20201128200526595](image-20201128200526595.png)
+![image-20201128200526595](../../4三千道藏/media/image-20201128200526595.png)
 
 #### 并行操作
 
@@ -4518,7 +4518,7 @@ min——返回流中最小值
 
 Integer 类型归约
 
-reduce 初始值为 0，累加器可以是[lambda](http://www.zimug.com/tag/lambda)表达式，也可以是方法引用。
+reduce 初始值为 0，累加器可以是[lambda](../../4三千道藏/media/http://www.zimug.com/tag/lambda)表达式，也可以是方法引用。
 
 ```java
 List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
@@ -4565,7 +4565,7 @@ System.out.println(total); //346
 
 collect——将流转换为其他形式，接收一个 Collector 接口的实现，用于给 Stream 中元素汇总的方法。
 
-![image-20201203224703080](image-20201203224703080.png)![image-20201203224831656](image-20201203224831656.png)
+![image-20201203224703080](../../4三千道藏/media/image-20201203224703080.png)![image-20201203224831656](../../4三千道藏/media/image-20201203224831656.png)
 
 ```java
 //打印
@@ -4640,9 +4640,9 @@ System.out.println(total); //346
 
 ## 3：空指针异常 optional
 
-![image-20201202224837452](image-20201202224837452.png)
+![image-20201202224837452](../../4三千道藏/media/image-20201202224837452.png)
 
-![image-20201202224845588](image-20201202224845588.png)
+![image-20201202224845588](../../4三千道藏/media/image-20201202224845588.png)
 
 ## 4：接口中的默认方法和静态方法
 
@@ -4662,7 +4662,7 @@ public interface MyFun{
 
 接口默认方法的“类优先”原则，优先继承
 
-![image-20201202225923189](image-20201202225923189.png)
+![image-20201202225923189](../../4三千道藏/media/image-20201202225923189.png)
 
 静态方法
 
@@ -4793,9 +4793,9 @@ https://docs.oracle.com/javase/9/
 
 ## 1：目录结构的改变
 
-![](ffb2eb22dcae8ef40c6853761a415c89.png)
+![](../../4三千道藏/media/ffb2eb22dcae8ef40c6853761a415c89.png)
 
-![](25724d7ababb496a843fcce7ca30814b.png)
+![](../../4三千道藏/media/25724d7ababb496a843fcce7ca30814b.png)
 
 不包含 jre 目录了
 
@@ -4811,15 +4811,15 @@ https://docs.oracle.com/javase/9/
 
 java9demo 模块
 
-![image-20201201163540677](image-20201201163540677.png)
+![image-20201201163540677](../../4三千道藏/media/image-20201201163540677.png)
 
 在引入模块
 
-![image-20201201163633858](image-20201201163633858.png)
+![image-20201201163633858](../../4三千道藏/media/image-20201201163633858.png)
 
 ## 3：REPL 工具：jShell 命令
 
-![](dc5707368d6100dee1c96a3864bba584.png)
+![](../../4三千道藏/media/dc5707368d6100dee1c96a3864bba584.png)
 
 REPL（read-evaluate-print-loop）交互式编程环境
 
@@ -4859,13 +4859,13 @@ jshell 直接隐藏处理了
 
 向后兼容
 
-![image-20201201170736924](image-20201201170736924.png)
+![image-20201201170736924](../../4三千道藏/media/image-20201201170736924.png)
 
 ## 5：接口的私有方法
 
 接口中放啊的访问权限修饰符可以声明为 private 的了
 
-![image-20201201171630033](image-20201201171630033.png)
+![image-20201201171630033](../../4三千道藏/media/image-20201201171630033.png)
 
 ```java
 //声明私有方法
@@ -4901,7 +4901,7 @@ Set<String> set = new HashSet<>(){};
 
 匿名实现类与钻石操作符共同使用在 8 中会报错，Java9 可以
 
-![](5f91f2fd5339c8beb04f85fb0d816069.png)
+![](../../4三千道藏/media/5f91f2fd5339c8beb04f85fb0d816069.png)
 
 ## 7：try 语句优化
 
@@ -5159,7 +5159,7 @@ JDK10：G1（Grabage -First）收集器：全收集器，既可以收集新生�
 
 分析工具
 
-![image-20201203163004298](image-20201203163004298.png)
+![image-20201203163004298](../../4三千道藏/media/image-20201203163004298.png)
 
 ## 3：新增的 API 功能
 
@@ -5192,7 +5192,7 @@ System.out.println(bos.toString("GBK"));
 
 ### 3.3：PrintStream 和 PrintWrite 新增构造方法
 
-![image-20201203175519351](image-20201203175519351.png)
+![image-20201203175519351](../../4三千道藏/media/image-20201203175519351.png)
 
 ### 3.4：Reader::transferTo
 
@@ -5204,7 +5204,7 @@ System.out.println(bos.toString("GBK"));
 
 ## 1：新增字符串处理方法
 
-![](a40a44e6d85ae5d2d6a337bdfe5eab43.png)
+![](../../4三千道藏/media/a40a44e6d85ae5d2d6a337bdfe5eab43.png)
 
 ## 2：全新 HTTP 客户端 API
 
@@ -5287,7 +5287,7 @@ switch(fruit){
 
 Shenandoah GC 工作周期如下所示：
 
-![image-20201205193344731](image-20201205193344731.png)
+![image-20201205193344731](../../4三千道藏/media/image-20201205193344731.png)
 
 上图对应工作周期如下：
 
@@ -5432,7 +5432,7 @@ String newQuery = """
 结束分隔符也是由三个双引号字符（"""）表示，文本块内容以结束分隔符的第一个双引号之前的最后一个
 字符结束。
 
-![image-20201205201710231](image-20201205201710231.png)
+![image-20201205201710231](../../4三千道藏/media/image-20201205201710231.png)
 
 注意：
 

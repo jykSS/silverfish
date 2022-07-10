@@ -22,5 +22,6 @@
   "obsidian-extract-pdf-highlights",
   "extract-url",
   "code-block-copy",
-  "url-into-selection"
+  "url-into-selection",
+  "obsidian-image-auto-upload-plugin"
 ]

@@ -111,7 +111,7 @@ cp /root/redis-3.0.0/redis.conf ./
 
 先要使用 vim redis.conf
 
-![](7b8b2844a91801ade69ee5c13417aad5.png))
+![](../../4三千道藏/media/7b8b2844a91801ade69ee5c13417aad5.png)
 
 第三步：使用命令后端启动 redis
 
@@ -121,7 +121,7 @@ cp /root/redis-3.0.0/redis.conf ./
 
 第四步：查看是否启动成功
 
-![](849caff655973b89cf583040defebf9b.png))
+![](../../4三千道藏/media/849caff655973b89cf583040defebf9b.png)
 
 关闭后端启动的方式：
 
@@ -177,11 +177,11 @@ cp /root/redis-3.0.0/redis.conf ./
 
 安装之后，打开如下：
 
-![](5601ebec5b960cf4283631830176e5cd.png))
+![](../../4三千道藏/media/5601ebec5b960cf4283631830176e5cd.png))
 
 防火墙设置：
 
-![](c07563023d5999a75c41aa25bd37a54f.png))
+![](../../4三千道藏/media/c07563023d5999a75c41aa25bd37a54f.png))
 
 Redis.conf 中的数据库数量的设置：
 

@@ -228,7 +228,7 @@ public class HelloController {
 
 理论处理流程：
 
-![img](1174906-20200317211657375-433915799.png))
+![img](../../4三千道藏/media/1174906-20200317211657375-433915799.png)
 
 （1）用户发送请求至前端控制器 DispatcherServlet；
 
@@ -254,7 +254,7 @@ public class HelloController {
 
 实现处理流程：
 
-![img](1174906-20180811205735659-1927603846.png))
+![img](../../4三千道藏/media/1174906-20180811205735659-1927603846.png)
 
 1）在 Web.xml 中配置前端控制器
 
@@ -399,7 +399,7 @@ public String addUserByPathVariable(@PathVariable String name, @PathVariable Str
 
 JSON 方式提交
 
-![image-20210302210444543](image-20210302210444543.png))
+![image-20210302210444543](../../4三千道藏/media/image-20210302210444543.png)
 
 ```java
 @RequestMapping(value = "/addByObjectJSON", produces = {"application/json;charset=UTF-8"})
@@ -1346,7 +1346,7 @@ System.**out**.println("AccountController 的 testReturnString
 
 运行结果：
 
-![](501f6af3753925e0ea71facf14b177cb.png))
+![](../../4三千道藏/media/501f6af3753925e0ea71facf14b177cb.png)
 
 ### 1.1.2 void
 
@@ -1583,7 +1583,7 @@ System.**out**.println("异步请求："+account);
 
 运行结果：
 
-![](e26e68ce023044b1e5381726795536ad.png))
+![](../../4三千道藏/media/e26e68ce023044b1e5381726795536ad.png)
 
 # 第 6 章 SpringMVC 实现文件上传
 
@@ -1831,7 +1831,7 @@ class=_"org.springframework.web.multipart.commons.CommonsMultipartResolver"_\>
 
 系统的 dao、service、controller 出现都通过 throwsException 向上抛出，最后由 springmvc 前端控制器交由异常处理器进行异常处理，如下图：
 
-![](04bb91d2a91d8bd56e2b3532fddd7beb.png))
+![](../../4三千道藏/media/04bb91d2a91d8bd56e2b3532fddd7beb.png)
 
 ## 3.2 实现步骤
 
@@ -1903,7 +1903,7 @@ class=_"com.xqc.exception.CustomExceptionResolver"_/\>
 
 **3.2.4** 运行结果：
 
-![](1bb56a082e30161d40f64a852a82ccef.png))
+![](../../4三千道藏/media/1bb56a082e30161d40f64a852a82ccef.png)
 
 # 第 8 章 SpringMVC 中的拦截器
 
@@ -1961,7 +1961,7 @@ class="com.xqc.web.interceptor.HandlerInterceptorDemo1"></bean>
 
 **4.2.3** 测试运行结果：
 
-![](9eb4e1b3b285694d1f1de4e8141374b6.png))
+![](../../4三千道藏/media/9eb4e1b3b285694d1f1de4e8141374b6.png)
 
 ## 4.3 拦截器的细节
 
@@ -2104,7 +2104,7 @@ public class HandlerInterceptorDemo2 implements HandlerInterceptor {
 
 ### 4.4.4 运行结果：
 
-![](41a9c6836674e557e3a30e58d6afea64.png))
+![](../../4三千道藏/media/41a9c6836674e557e3a30e58d6afea64.png)
 
 ## 4.5 中断流程测试
 
@@ -2184,7 +2184,7 @@ System.out.println("拦截器2：afterCompletion方法执行了");
 
 ### 4.5.4 运行结果：
 
-![](8f663df4ac10146b86ff70c43eaccba1.png))
+![](../../4三千道藏/media/8f663df4ac10146b86ff70c43eaccba1.png)
 
 ## 4.6 拦截器的简单案例（验证用户是否登录）
 

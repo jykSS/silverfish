@@ -4,7 +4,7 @@ Java BIO :同步并阻塞(传统阻塞型)，服务器实现模式为一个连�
 
 Java NIO :同步非阻塞，服务器实现模式为一个线程处理多个请求(连接)，即客户端发送的连接请求都会注册到多路复用器上，多路复用器轮询到连接有IO请求就进行处理
 
-![image-20210127174024868](media/image-20210127174024868.png)
+
 
 Java AIO(NIO.2):异步非阻塞，AIO引入异步通道的概念，采用了Proactor 模式，简化了程序编写，有效的请求才启动线程，它的特点是先由操作系统完成后才通知服务端程序启动线程去处理，一般适用于连接数较多且连接时间较长的应用
 
@@ -26,7 +26,7 @@ BIO基于字节流和字符流进行操作，而NIO 基于Channel(通道)和 Buf
 
 ## BIO
 
-![641](641.png)
+![641](../../4三千道藏/media/641.png)
 
 **特点**
 
@@ -50,7 +50,6 @@ Java NIO的非阻塞模式，使一个线程从某通道发送请求或者读取
 
 HTTP2.0使用了多路复用的技术，做到同一个连接并发处理多个请求，而且并发请求的数量比HTTP1.1大了好几个数量级
 
-![image-20210127204519007](media/image-20210127204519007.png)
 
 1)每个channel都会对应一个Buffer
 
@@ -118,7 +117,7 @@ AIO 即 NIO2.0，叫做异步不阻塞的IO。AIO引入异步通道的概念，�
 
 netty提供了零拷贝的buffer，在传输数据时，最终处理的数据会需要对单个传输的报文，进行组合和拆分，Nio原生的ByteBuffer无法做到，netty通过提供的Composite(组合)和Slice(拆分)两种buffer来实现零拷贝；
 
-![image-20210116162454049](image-20210116162454049.png)
+![image-20210116162454049](../../4三千道藏/media/image-20210116162454049.png)
 
 
 
@@ -302,11 +301,9 @@ IO复用结合线程池，就是Reactor模式基本设计思想
 
 基于IO 复用模型:多个连接共用一个阻塞对象，应用程序只需要在一个阻塞对象等待，无需阻塞等待所有连接。当某个连接有新的数据可以处理时，操作系统通知应用程序，线程从阻塞状态返回，开始进行业务处理Reactor 对应的叫法:1.反应器模式2.分发者模式(Dispatcher)3.通知者模式(notifier)
 
-![image-20210127213747933](media/image-20210127213747933.png)
 
 #### 单Reactor单线程
 
-![image-20210127214425086](media/image-20210127214425086.png)
 
 - Select是前面IO 复用模型介绍的标准网络编程API,可以实现应用程序通过一个阻塞对象监听多路连接请求
 - Reactor对象通过Select 监控客户端请求事件，收到事件后通过Dispatch进行分发
@@ -334,7 +331,6 @@ IO复用结合线程池，就是Reactor模式基本设计思想
 
 #### 主从REactor多线程
 
-![image-20210127214943915](media/image-20210127214943915.png)
 
 1) Reactor主线程MainReactor对象通过select 监听连接事件,收到事件后，通过Acceptor 处理连接事件
 
@@ -366,7 +362,6 @@ IO复用结合线程池，就是Reactor模式基本设计思想
 
 Netty主要基于主从Reactors多线程模型多的一定的改进。
 
-![image-20210127215252013](media/image-20210127215252013.png)
 
 1)BossGroup 线程维护Selector ，只关注Accecpt
 
@@ -376,7 +371,6 @@ Netty主要基于主从Reactors多线程模型多的一定的改进。
 
 详细原理：
 
-![image-20210127215445674](media/image-20210127215445674.png)
 
 1) Netty 抽象出两组线程池 BossGroup专门负责接收客户端的连接, WorkerGroup专门负责网络的读写
 
@@ -436,7 +430,7 @@ server.group(bossGroup, workerGroup)
 
 这里借用O'Reilly 大神关于事件驱动模型解释图
 
-![640](640.png)
+![640](../../4三千道藏/media/640.png)
 
 
 主要包括4个基本组件：
@@ -551,7 +545,7 @@ ChannelPipeline是一个重点:
 
 3)在Netty 中每个Channel都有且仅有一个ChannelPipeline 与之对应，它们的组成关系如下 
 
-![648](648.jpg)
+![648](../../4三千道藏/media/648.jpg)
 
 入站Handler处理程序通常处理由图底部的I / O线程生成的入站数据。 通常通过实际输入操作（例如SocketChannel.read（ByteBuffer））从远程读取入站数据。
 
@@ -561,7 +555,7 @@ ChannelPipeline是一个重点:
 
 下图引用Netty的Javadoc4.1中ChannelPipline的说明，描述了ChannelPipeline中ChannelHandler通常如何处理I/O事件。 I/O事件由ChannelInboundHandler或ChannelOutboundHandler处理，并通过调用ChannelHandlerContext中定义的事件传播方法（例如ChannelHandlerContext.fireChannelRead（Object）和ChannelOutboundInvoker.write（Object））转发到其最近的处理程序。
 
-![647](647.jpg)
+![647](../../4三千道藏/media/647.jpg)
 
 一个 Channel 包含了一个 ChannelPipeline, 而 ChannelPipeline 中又维护了一个由 ChannelHandlerContext 组成的双向链表, 并且每个 ChannelHandlerContext 中又关联着一个 ChannelHandler。入站事件和出站事件在一个双向链表中，入站事件会从链表head往后传递到最后一个入站的handler，出站事件会从链表tail往前传递到最前一个出站的handler，两种类型的handler互不干扰。
 
@@ -575,7 +569,6 @@ I)TCP是面向连接的，面向流的，提供高可靠性服务。收发两端
 
 2)由于TCP无消息保护边界,需要在接收端处理消息边界问题，也就是我们所说的粘包、拆包问题，看一张图
 
-![image-20210127221115427](media/image-20210127221115427.png)
 
 假设客户端分别发送了两个数据包D1和D2给服务端，由于服务端一次读取到字节数是不确定的，故可能存在以下四种情况:
 
@@ -704,7 +697,7 @@ public static void main(String[] args) {
 
 结合上面的介绍的Netty Reactor模型，介绍服务端Netty的工作架构图：
 
-![649](649.jpg)
+![649](../../4三千道藏/media/649.jpg)
 
 server端包含1个Boss NioEventLoopGroup和1个Worker NioEventLoopGroup，NioEventLoopGroup相当于1个事件循环组，这个组里包含多个事件循环NioEventLoop，每个NioEventLoop包含1个selector和1个事件循环线程。
 

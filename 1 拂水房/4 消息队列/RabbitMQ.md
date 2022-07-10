@@ -83,7 +83,7 @@ RabbitMQ 提供了一个易用的用户界面，使得用户可以监控和管�
 
 将 Erlang 加入到环境变量中
 
-![image-20210124221645827](media/image-20210124221645827.png)
+![image-20210124221645827](../../4三千道藏/media/image-20210124221645827.png)
 
 将其添加到 PATH 中
 
@@ -93,13 +93,13 @@ RabbitMQ 提供了一个易用的用户界面，使得用户可以监控和管�
 
 将 RabbitMQ 加入到环境变量中
 
-![image-20210124221615028](media/image-20210124221615028.png)
+![image-20210124221615028](../../4三千道藏/media/image-20210124221615028.png)
 
 重启计算机
 
 运行 RabbitMQ Service - start
 
-![image-20210124222239787](media/image-20210124222239787.png)
+![image-20210124222239787](../../4三千道藏/media/image-20210124222239787.png)
 
 切换到安装目录的 sbin 目录，启动图形化界面：
 
@@ -353,12 +353,12 @@ rabbitmqctl delete vhost bjpowernode
 ### 1：结构
 
 所有 MQ 产品从模型抽象上来说都是一样的过程：消费者（consumer）订阅某个队列。生产者（producer）创建消息，然后发布到队列（queue）中，最后将消息发送到监听的消费者。
-![image-20201112222239406](image-20201112222239406.png))
+![image-20201112222239406](../../4三千道藏/media/image-20201112222239406.png)
 
 上面是 MQ 的基本抽象模型，但是不同的 MQ 产品有有者不同的机制，RabbitMQ 实际基于 AMQP 协议的一个开源实现，因此 RabbitMQ 内部也是 AMQP 的基本概念。
 
 RabbitMQ 的内部接收如下：
-![image-20201112222252479](image-20201112222252479.png))
+![image-20201112222252479](../../4三千道藏/media/image-20201112222252479.png)
 
 1、Message
 消息，消息是不具体的，它由消息头和消息体组成。消息体是不透明的，而消息头则由一系列的可选属性组成，这些属性包括 routing-key（路由键）、priority（相对于其他消息的优先权）、delivery-mode（指出该消息可能需要持久性存储）等。
@@ -475,7 +475,7 @@ if(ack){
 2：work 工作模式：资源竞争
 
 消费者 1,消费者 2 同时监听同一个队列,消息被消费。C1 C2 共同争抢当前的消息队列内容,谁先拿到谁负责消费消息
-![img](aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAxOS84LzI4LzE2Y2Q3NTE3OGI3ZTVlMjA.png))
+![img](../../4三千道藏/media/aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAxOS84LzI4LzE2Y2Q3NTE3OGI3ZTVlMjA.png)
 
 均衡算法，消费者是平均分配的。
 
@@ -484,14 +484,14 @@ if(ack){
 高并发情况下,默认会产生某一个消息被多个消费者共同使用,可以设置一个开关(syncronize) 保证一条消息只能被一个消费者使用
 
 3：Fanout,广播模式下
-![img](aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAxOS84LzI4LzE2Y2Q3Njk2NGMxMGM3NWI.png))
+![img](../../4三千道藏/media/aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAxOS84LzI4LzE2Y2Q3Njk2NGMxMGM3NWI.png)
 
 每个消费者监听自己的队列；
 
 生产者将消息发给 broker 交换机，由交换机将消息转发到绑定此交换机的每个队列，每个绑定交换机的队列都将接收到消息。注册业务，注册成功后既要发邮件又要发短信
 
 4：routing 路由模式
-![img](aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAxOS84LzI4LzE2Y2Q3ODFiZWFjOWMxNzQ.png))
+![img](../../4三千道藏/media/aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAxOS84LzI4LzE2Y2Q3ODFiZWFjOWMxNzQ.png)
 
 消息生产者将消息发送给交换机按照路由判断,路由是字符串(info) 当前产生的消息携带路由字符(对象的方法),交换机根据路由的 key,只能匹配上路由 key 对应的消息队列,对应的消费者才能消费消息;
 
@@ -502,7 +502,7 @@ error 通知;
 EXCEPTION;错误通知的功能;传统意义的错误通知;客户通知;利用 key 路由,可以将程序中的错误封装成消息传入到消息队列中,开发者可以自定义消费者,实时接收错误;
 
 5：topic 主题模式
-![img](aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAxOS84LzI4LzE2Y2Q3ODQ2ZjYxNjk2NjE.png))
+![img](../../4三千道藏/media/aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAxOS84LzI4LzE2Y2Q3ODQ2ZjYxNjk2NjE.png)
 
 \*代表多个单词，#代表一个单词
 
@@ -511,7 +511,7 @@ EXCEPTION;错误通知的功能;传统意义的错误通知;客户通知;利用 
 ## 3.2 AMQP 中的消息路由
 
 AMQP 中消息的路由过程和 Java 开发者熟悉的 JMS 存在一些差别，AMQP 中增加了 Exchange 和 Binding 的角色。生产者把消息发布到 Exchange 上，消息最终到达队列并被消费者接收，而 Binding 决定交换器的消息应该发送到那个队列
-![image-20201112222318522](image-20201112222318522.png))
+![image-20201112222318522](../../4三千道藏/media/image-20201112222318522.png)
 
 路由：
 
@@ -529,17 +529,17 @@ Exchange 分发消息时根据类型的不同分发策略有区别，目前共�
 1、direct
 
 消息中的路由键（routing key）如果和 Binding 中的 binding key 一致， 交换器就将消息发到对应的队列中。路由键与队列名完全匹配，如果一个队列绑定到交换机要求路由键为“dog”，则只转发 routing key 标记为“dog”的消息，不会转发“dog.puppy”，也不会转发“dog.guard”等等。它是完全匹配、单播的模式。
-![image-20201112222358526](image-20201112222358526.png))
+![image-20201112222358526](../../4三千道藏/media/image-20201112222358526.png)
 
 2、fanout
 
 每个发到 fanout 类型交换器的消息都会分到所有绑定的队列上去。fanout 交换器不处理路由键，只是简单的将队列绑定到交换器上，每个发送到交换器的消息都会被转发到与该交换器绑定的所有队列上。很像子网广播，每台子网内的主机都获得了一份复制的消息。fanout 类型转发消息是最快的。
-![image-20201112222412788](image-20201112222412788.png))
+![image-20201112222412788](../../4三千道藏/media/image-20201112222412788.png)
 
 3、topic
 
 topic 交换器通过模式匹配分配消息的路由键属性，将路由键和某个模式进行匹配，此时队列需要绑定到一个模式上。它将路由键和绑定键的字符串切分成单词，这些单词之间用点隔开。它同样也会识别两个通配符：符号“#”和符号“_”。#匹配 0 个或多个单词，“_”匹配不多不少一个单词。
-![image-20201112222424881](image-20201112222424881.png))
+![image-20201112222424881](../../4三千道藏/media/image-20201112222424881.png)
 
 ## 3.4 Java 发送和接收 Queue 的消息
 
@@ -1304,8 +1304,8 @@ ConnectionFactory factory = new ConnectionFactory(); factory.setUsername("root")
 ## 4.1 创建消息生产者工程
 
 创建模块 02-rabbitmq-springboot-send
-![image-20201214175500578](image-20201214175500578.png))
-![image-20201214175511553](image-20201214175511553.png))
+![image-20201214175500578](../../4三千道藏/media/image-20201214175500578.png)
+![image-20201214175511553](../../4三千道藏/media/image-20201214175511553.png)
 
 配置模块 02-rabbitmq-springboot-send 的 application.properties 文件添加对 RabbitMQ 的集成
 
@@ -1353,8 +1353,8 @@ public class Application{
 ## 4.2 创建消息接收者工程
 
 创建模块 02-rabbitmq-springboot-receive
-![image-20201214213244839](image-20201214213244839.png))
-![image-20201214213257519](image-20201214213257519.png))
+![image-20201214213244839](../../4三千道藏/media/image-20201214213244839.png)
+![image-20201214213257519](../../4三千道藏/media/image-20201214213257519.png)
 
 配置模块 02-rabbitmq-springboot-receive 的 application.properties 文件添加对 RabbitMQ 的集成
 
@@ -1692,14 +1692,14 @@ public class Application {
 # 第 5 章 RabbitMQ 集群
 
 普通集群：
-![image-20210322172628688](image-20210322172628688.png))
+![image-20210322172628688](../../4三千道藏/media/image-20210322172628688.png)
 
 只有一台机器上存储着原本的数据，其他两台服务器上只存储数据所在的位置，如果通过第一第三台去查，还是去第二台查，查完后返回一三，然后再返回消费者。
 
 缺点：第二台服务器性能消耗比较大，如果第二台服务器挂了，所有的数据就都没了。
 
 镜像集群：
-![image-20210322173051586](image-20210322173051586.png))
+![image-20210322173051586](../../4三千道藏/media/image-20210322173051586.png)
 
 每个节点上都保存了数据。生产者给一个发，发完交给 RabbitMQ 去同步，如果其中一个挂了，就换一个发消息。该模式也带来了副作用，除了降低系统性能外，如果镜像队列过多，加之有大量的消息进入，集群内部的网络带宽将会被这种同步通讯大大消耗掉。
 
@@ -1868,7 +1868,7 @@ rabbitmqctl add*user root root rabbitmqctl set_user_tags root administrator rabb
 消息有序指的是可以按照消息的发送顺序来消费
 
 假如生产者产生了 2 条消息：M1、M2，假定 M1 发送到 S1，M2 发送到 S2，如果要保证 M1 先于 M2 被消费，怎么做？
-![img](aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAxOS81LzQvMTZhODMwNzVlMjc1NTFiMA.png))
+![img](../../4三千道藏/media/aHR0cHM6Ly91c2VyLWdvbGQtY2RuLnhpdHUuaW8vMjAxOS81LzQvMTZhODMwNzVlMjc1NTFiMA.png))
 
 乱序情况：
 
@@ -1889,7 +1889,7 @@ rabbitmqctl add*user root root rabbitmqctl set_user_tags root administrator rabb
 比如：张三发送消息：M3，M2，M1，李四发送消息：S3，S2，S1
 
 将张三和李四发送的消息分别发送到两个 Queue 中，如果张三要求顺序消费，当消费者 1 消费了 Queue1 中的数据后，就给 Queue1 加上一个分段锁，直到消费者 1ack 以后才释放分段锁，其他队列不受影响。
-![image-20210322170351819](image-20210322170351819.png))
+![image-20210322170351819](../../4三千道藏/media/image-20210322170351819.png)
 
 RocketMQ 的实现：
 
@@ -2052,7 +2052,7 @@ RabbitMQ 丢失数据：开启持久化（持久化标识 durable 设置为 true
 消息补偿机制需要建立在业务数据库和 MQ 数据库的基础之上 , 当我们发送消息时 , 需要同时将消息数据保存在数据库中, 两者的状态必须记录。 然后通过业务数据库和 MQ 数据库的对比检查消费是否成功，不成功，进行消息补偿措施，重新发送消息处理
 
 # 第六章：项目中的应用
-![image-20201218112212648](image-20201218112212648.png))
+![image-20201218112212648](../../4三千道藏/media/image-20201218112212648.png)
 
 ## 1：如何解决消息队列的延时以及过期失效问题？有几百万消息持续积压几小时，怎么解决？
 

@@ -40,7 +40,7 @@ Spring 是一个框架，是一个半成品的软件。有 20 个模块组成。
     对 JavaEE 开发中非常难用的一些 API（JDBC、JavaMail、远程调用等），都提供了封装，使这些 API 应用难度大大降低
 
 Spring **体系结构**
-![](87d9fbefc903d2889466a35363150c0b.jpg))
+![](../../4三千道藏/media/87d9fbefc903d2889466a35363150c0b.jpg)
 
 ## 1.3：核心容器
 
@@ -237,7 +237,7 @@ public void test07() {
 ```
 
 C**、** 使用 spring 容器创建的 java 对象
-![](9324f0294fe12578500c994e1f2359fb.jpg))
+![](../../4三千道藏/media/9324f0294fe12578500c994e1f2359fb.jpg)
 
 ## 2.3：Bean
 
@@ -353,7 +353,7 @@ FactoryBean：特殊 bean，用于生成另一个特定的 bean。例如：Proxy
 ### 2.3.3：作用域
 
 用于确定 spring 创建 bean 实例个数
-![](aa772d8ed240f94aaaddad50ab491b4c.png))
+![](../../4三千道藏/media/aa772d8ed240f94aaaddad50ab491b4c.png)
 
 单例的 bean
 
@@ -369,7 +369,7 @@ prototype
 ```xml
 <bean id="" class="" scope="">
 ```
-![](5737f3ce1d2fb71bec94eda59f7b6eb7.png))
+![](../../4三千道藏/media/5737f3ce1d2fb71bec94eda59f7b6eb7.png)
 
 ```xml
 <bean id=*"userServiceId"* class=*"com.xqc.d_scope.UserServiceImpl"*   scope=*"prototype"* ></bean>
@@ -383,7 +383,7 @@ ThreadLocal 和线程同步机制都是为了解决多线程中相同变量的�
 
 ### 2.3.4 生命周期
 
-![image-20200614155732584](media/image-20200614155732584.png)
+![image-20200614155732584](../../4三千道藏/media/image-20200614155732584.png)
 
 Spring 容器启动扫描，把 BeanName 变成 BeanDefinition 存到 BeanDefinitionMap 中，然后进行遍历，遍历完成之后。对 Spring 的 BeanDefinition 做一系列的验证(是否单例，是否抽象，是否懒加载等等)，验证完成，接着实例化之前，去单例池中看这个 bean 是否已经被创建，如果没有被创建，再查看是否在二级缓存中，看有没有被提前暴露，如果都没有，则继续执行，创建 X 对象，然后对对象做一些初始化工作，（填充属性，在填充属性的过程中，他发现 X 依赖了 Y，就会继续走 Y 的生命周期，）
 
@@ -516,7 +516,7 @@ A 实例化，放到半成品池中，填充属性填充 B，B 没有，创建 B
 
 三级缓存解决代理对象循环依赖过程：
 
-![image-20210331200824638](media/image-20210331200824638.png)
+![image-20210331200824638](../../4三千道藏/media/image-20210331200824638.png)
 
 A 实例化，在工厂池中添加 factoty(a) ，调用 a 的提前引用方法，执行动态代理引用，（提前引用就是为了如果在本身实例化过程中，如果有别人调用我，就会执行提前引用，否则就不执行），填充 B，B 没有，创建 B，填充 A，调用 A 的 factory(a)方法，创建动态代理，将 A 的动态代理放入到半成品池，然后从半成品池中取得填充到 B 中，B 填充完之后就会进行初始化，然后执行后置处理方法，同时就会创建一个动态代理的 B，将创建的代理 B 放到单例池中去，然后重单例池中取出 B 填充到 A 中。
 
@@ -528,7 +528,7 @@ A 实例化，在工厂池中添加 factoty(a) ，调用 a 的提前引用方法
 
 OverridingClassLoader 继承自 DecoratingClassLoader ，DecoratingClassLoader 又继承自 ClassLoader
 
-![image-20210224142741473](media/image-20210224142741473.png)
+![image-20210224142741473](../../4三千道藏/media/image-20210224142741473.png)
 
 DecoratingClassLoader 很简单，内部维护了两个集合，如果你不想你的类被自定义的类加载器管理，可以把它添加到这两个集合中，这样仍使用 JDK 的默认类加载机制。
 
@@ -839,7 +839,7 @@ public class Student{
 ### 2.4.4 byName 自动注入@Autowired 与@Qualifier(掌握)
 
 需要在引用属性上联合使用注解@Autowired 与@Qualifier。@Qualifier 的 value 属性用于指定要匹配的 Bean 的 id 值。类中无需 set 方法，也可加到 set 方法上。
-![](2e94d6233a0deed6b2d6a9e302bef48c.png))
+![](../../4三千道藏/media/2e94d6233a0deed6b2d6a9e302bef48c.png)
 
 @Autowired 还有一个属性 required，默认值为 true，表示当匹配失败后，会终止程序运行。若将其值设置为 false，则匹配失败，将被忽略，未匹配的属性值为 null。
 
@@ -854,14 +854,14 @@ Spring 提供了对 jdk 中@Resource 注解的支持。**@Resource** 注解既�
 @Resource 注解若不带任何参数，采用默认按名称的方式注入，按名称不能注入 bean，则会按照类型进行 Bean 的匹配注入。
 
 > 举例：
-![](420f226adb8de91eb1bc03bafc2f8ba5.png))
+![](../../4三千道藏/media/420f226adb8de91eb1bc03bafc2f8ba5.png)
 
 **（**2**）** byName **注入引用类型属性**
 
 @Resource 注解指定其 name 属性，则 name 的值即为按照名称进行匹配的 Bean 的 id。
 
 > 举例：
-![](94f3c34dfb03aaa898f44c2d550794c5.png))
+![](../../4三千道藏/media/94f3c34dfb03aaa898f44c2d550794c5.png)
 
 ### 2.4.6 注解与 XML 的对比
 
@@ -985,7 +985,7 @@ public class MyTest {
 使用 **AOP** 减少重复代码，专注业务实现：
 
 它将应用系统拆分分了 2 个部分：核心业务逻辑（Core business concerns）及横向的通用逻辑，
-![](38f7a158418705b93f68089b02c77c0a.jpg))
+![](../../4三千道藏/media/38f7a158418705b93f68089b02c77c0a.jpg)
 
 ## 3.3 动态代理
 
@@ -1209,7 +1209,7 @@ name-pattern(param-pattern) 方法名(参数类型和参数个数) throws-patter
 execution(访问权限 方法返回值 方法声明(参数) 异常类型)
 
 切入点表达式要匹配的对象就是目标方法的方法名。所以，execution 表达式中明显就是方法的签名。注意，表达式中黑色文字表示可省略部分，各部分间用空格分开。在其中可以使用以下符号：
-![](c99a59dc73f328597c2a7162f1819ac6.jpg))
+![](../../4三千道藏/media/c99a59dc73f328597c2a7162f1819ac6.jpg)
 
 举例：
 
@@ -1645,7 +1645,7 @@ Spring 的事务管理，主要用到两个事务相关的接口。 **三个顶�
 ### （1） PlatformTransactionManager (重点)
 
 事务管理器是 PlatformTransactionManager 接口对象。其主要用于完成事务的提交、回滚，及获取事务的状态信息。
-![](c1d4e5b8053192cc3669438b87800d1d.jpg))
+![](../../4三千道藏/media/c1d4e5b8053192cc3669438b87800d1d.jpg)
 
 A、 常用的两个实现类
 
@@ -1661,7 +1661,7 @@ Spring 事务的默认回滚方式是：发生运行时异常和 error 时回滚
 
 **C**、 回顾错误与异常**(**理解**)**
 
-![](media/b52dfc6d24a5a11d44ad083e3f07f9e4.png)
+![](../../4三千道藏/media/b52dfc6d24a5a11d44ad083e3f07f9e4.png)
 
 Throwable 类是 Java 语言中所有错误或异常的超类。只有当对象是此类(或其子类之一)
 的实例时，才能通过 Java 虚拟机或者 Java 的 throw 语句抛出。
@@ -1686,7 +1686,7 @@ RuntimeException 的子类，那么定义的就是受查异常。
 ### （2） TransactionDefinition 事务定义接口
 
 事务定义接口 TransactionDefinition 中定义了事务描述相关的三类常量：事务隔离级别、事务传播行为、事务默认超时时限，及对它们的操作。
-![](64f6b72a64f5a5cb483acf8bf340cc8c.jpg))
+![](../../4三千道藏/media/64f6b72a64f5a5cb483acf8bf340cc8c.jpg)
 
 #### A、 五个事务隔离级别常量(掌握)
 
@@ -1729,17 +1729,17 @@ a**、** PROPAGATION_REQUIRED （propagation_required）
 指定的方法必须在事务内执行。**若当前存在事务，就加入到当前事务中；若当前没有事务，则创建一个新事务**。这种传播行为是最常见的选择，也是 Spring 默认的事务传播行为。如该传播行为加在 doOther()方法上。
 
 若 doSome()方法在调用 doOther()方法时就是在事务内运行的，则 doOther()方法的执行也加入到该事务内执行。若 doSome()方法在调用 doOther()方法时没有在事务内执行，则 doOther()方法会创建一个事务，并在其中执行。
-![](3423cd9525d1c27494b80123d46e3904.jpg))
+![](../../4三千道藏/media/3423cd9525d1c27494b80123d46e3904.jpg)
 
 b**、** PROPAGATION_SUPPORTS （propagation_supports）
 
 指定的方法支持当前事务，但若当前没有事务，也可以以非事务方式执行。
-![](be02e5bd7fb603ca136b043339e071f3.jpg))
+![](../../4三千道藏/media/be02e5bd7fb603ca136b043339e071f3.jpg)
 
 c**、** PROPAGATION_REQUIRES_NEW (propagation_requires_new)
 
 > 总是新建一个事务，若当前存在事务，就将当前事务挂起，直到新事务执行完毕。
-![](4df275eef6022f7608416d922e3deda0.jpg))
+![](../../4三千道藏/media/4df275eef6022f7608416d922e3deda0.jpg)
 
 **D：PROPAGATION_MANDATORY（propagation_mandatory）：支持当前事务，如果当前存在事务，就加入该事务，如果当前不存在事务，就抛出异常。**
 
@@ -1955,7 +1955,7 @@ Step2：注册监听器 ContextLoaderListener
 ```
 
 Spring 为该监听器接口定义了一个实现类 ContextLoaderListener，完成了两个很重要的工作：创建容器对象，并将容器对象放入到了 ServletContext 的空间中。打开 ContextLoaderListener 的源码。看到一共四个方法，两个是构造方法，一个初始化方法，一个销毁方法。
-![](4cedb6ab9281ed981c66109665eeef90.jpg))
+![](../../4三千道藏/media/4cedb6ab9281ed981c66109665eeef90.jpg)
 
 所以，在这四个方法中较重要的方法应该就是 contextInitialized()，context 初始化方法。
 

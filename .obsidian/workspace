@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "c3e4351f0bac023f",
+        "id": "408ee76e5c1c2db4",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "1 拂水房/5 Spring/1 Spring框架.md",
-            "mode": "source",
+            "file": "1 拂水房/1 Java基础/Java基础.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -33,7 +33,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "![image-20210225094938987](image-20210225094938987.png)",
+                "query": "5c43a3eab7e40913c14fe60dcf45b1c1",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310
+    "width": 485
   },
   "right": {
     "id": "07860fe6748ee06b",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 拂水房/5 Spring/1 Spring框架.md"
+                "file": "1 拂水房/1 Java基础/Java基础.md"
               }
             }
           },
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 拂水房/5 Spring/1 Spring框架.md",
+                "file": "1 拂水房/1 Java基础/Java基础.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,17 +113,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "c3e4351f0bac023f",
+  "active": "408ee76e5c1c2db4",
   "lastOpenFiles": [
-    "1 拂水房/5 Spring/1 Spring框架.md",
-    "1 拂水房/3redis笔记/redis笔记.md",
-    "4三千道藏/media/image-20210225094938987.png",
-    "1 拂水房/17 lucene笔记/lucene笔记.md",
-    "1 拂水房/18 项目整合篇/项目整合篇.md",
     "1 拂水房/1 Java基础/Java基础.md",
-    "1 拂水房/1 Java基础/Java精进加薪课.md",
-    "3恬裕斋/《对线面试官》Java程序员面试宝典.pdf",
-    "1 拂水房/10 面经/58同城.md",
-    "1 拂水房/10 面经/阿里文娱.md"
+    "1 拂水房/3redis笔记/redis笔记.md",
+    "4三千道藏/media/8a877c23948dede5955016c726a51eff.png",
+    "1 拂水房/2 MySQL，Oracle/Mysql/MySQL.md",
+    "media/12842279-fad6a5f84672b388.png.md",
+    "1 拂水房/2 MySQL，Oracle/Mysql/分库分表.md",
+    "media/20190903074236479.png.md",
+    "4三千道藏/media/642.jpg",
+    "4三千道藏/media/641.png",
+    "4三千道藏/media/image-20201208223420158.png"
   ]
 }

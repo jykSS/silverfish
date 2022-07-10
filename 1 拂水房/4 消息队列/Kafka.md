@@ -10,7 +10,7 @@ Kafka 是一个分布式的基于发布/订阅模式的消息队列（MessageQue
 
 ### 1.2.1 传统消息队列的应用场景
 
-![image-20210106150650059](image-20210106150650059.png))
+![image-20210106150650059](../../4三千道藏/media/image-20210106150650059.png)
 
 使用消息队列的好处
 
@@ -40,17 +40,17 @@ Kafka 是一个分布式的基于发布/订阅模式的消息队列（MessageQue
 
 Queue 支持存在多个消费者，但是对一个消息而言，只会有一个消费者可以消费。
 
-![](825613803daec1ed7392f8eb946c8bac.jpg))
+![](../../4三千道藏/media/825613803daec1ed7392f8eb946c8bac.jpg)
 
 2：发布**/**订阅模式（一对多，消费者消费数据之后不会清除消息）
 
 消息生产者（发布）将消息发布到 topic 中，同时有多个消息消费者（订阅）消费该消息。和点对点方式不同，发布到 topic 的消息会被所有订阅者消费。
 
-![](ee4bd138fb605cf58023be35caf84c42.jpg))
+![](../../4三千道藏/media/ee4bd138fb605cf58023be35caf84c42.jpg)
 
 ## 1.3 Kafka 基础架构
 
-![image-20210106150721739](image-20210106150721739.png))
+![image-20210106150721739](../../4三千道藏/media/image-20210106150721739.png)
 
 **Producer** ：消息生产者，就是向 kafka broker 发消息的客户端；
 
@@ -86,7 +86,7 @@ kafka kafka kafka
 
 http://kafka.apache.org/downloads.html
 
-![](d550601e22b4a5064e28943848f4804a.jpg))
+![](../../4三千道藏/media/d550601e22b4a5064e28943848f4804a.jpg)
 
 ### 2.1.3 集群部署
 
@@ -237,7 +237,6 @@ bin/kafka-topics.sh hadoop102:2181 --alter --topic first --partitions 6
 
 # 第 3 章 Kafka 架构深入
 
-![image-20210404220413324](media/image-20210404220413324.png)
 
 一个 topic 对应多个 partation，为保证 partation 的可用性，每个 partation 都有一个或者多个 follower，消费者只能从 leader 中读数据，单个的 partation 是可以保证有序的。
 
@@ -263,11 +262,11 @@ partation 数据路由规则
 
 ## 3.1 Kafka 工作流程及文件存储机制
 
-![image-20210106151804859](image-20210106151804859.png))
+![image-20210106151804859](../../4三千道藏/media/image-20210106151804859.png)
 
 Kafka 中消息是以 **topic** 进行分类的，生产者生产消息，消费者消费消息，都是面向 topic 的。 topic 是逻辑上的概念，而 partition 是物理上的概念，每个 partition 对应于一个 log 文件，该 log 文件中存储的就是 producer 生产的数据。Producer 生产的数据会被不断追加到该 log 文件末端，且每条数据都有自己的 offset。消费者组中的每个消费者，都会实时记录自己消费到了哪个 offset，以便出错恢复时，从上次的位置继续消费。
 
-![image-20210106151856074](image-20210106151856074.png))
+![image-20210106151856074](../../4三千道藏/media/image-20210106151856074.png)
 
 由于生产者生产的消息会不断追加到 log 文件末尾，为防止 log 文件过大导致数据定位,效率低下，Kafka 采取了分片和索引机制，将每个 partition 分为多个 segment。每个 segment 对应两个文件——“.index”文件和“.log”文件。这些文件位于一个文件夹下，该文件夹的命名规则为：topic 名称+分区序号。例如，first 这个 topic 有三个分区，则其对应的文件夹为
 
@@ -281,7 +280,7 @@ first-0,first-1,first-2。
 
 index 和 log 文件以当前 segment 的第一条消息的 offset 命名。下图为 index 文件和 log 文件的结构示意图。
 
-![image-20210106152009147](image-20210106152009147.png))
+![image-20210106152009147](../../4三千道藏/media/image-20210106152009147.png)
 
 “.index”文件存储大量的索引信息，“.log”文件存储大量的数据，索引文件中的元数据指向对应数据文件中 message 的物理偏移地址。
 
@@ -303,7 +302,7 @@ index 和 log 文件以当前 segment 的第一条消息的 offset 命名。下�
 
    我们需要将 producer 发送的数据封装成一个 **ProducerRecord** 对象。
 
-![](11e8643384ea2b5fe616b68cdb8c5e5b.jpg))
+![](../../4三千道藏/media/11e8643384ea2b5fe616b68cdb8c5e5b.jpg)
 
 - 指明 partition 的情况下，直接将指明的值直接作为 partiton 值；
 
@@ -315,7 +314,7 @@ index 和 log 文件以当前 segment 的第一条消息的 offset 命名。下�
 
 为保证 producer 发送的数据，能可靠的发送到指定的 topic，topic 的每个 partition 收到 producer 发送的数据后，都需要向 producer 发送 ack（acknowledgement 确认收到），如果 producer 收到 ack，就会进行下一轮的发送，否则重新发送数据。
 
-![image-20210106152228043](image-20210106152228043.png))
+![image-20210106152228043](../../4三千道藏/media/image-20210106152228043.png)
 
 **副本数据同步策略**
 
@@ -360,7 +359,7 @@ Kafka 中 topic 的每个 Partition 有一个预写式日志文件，每个 Part
 
 故障处理细节
 
-![image-20210106152530965](image-20210106152530965.png))
+![image-20210106152530965](../../4三千道藏/media/image-20210106152530965.png)
 
 **LEO**：指的是每个副本最大的 **offset**；
 
@@ -424,7 +423,7 @@ Range
 
 由于 consumer 在消费过程中可能会出现断电宕机等故障，consumer 恢复后，需要从故障前的位置的继续消费，所以 consumer 需要实时记录自己消费到了哪个 offset，以便故障恢复后继续消费。
 
-![](b1258fb46d4aafce3e86b8236d686200.jpg))
+![](../../4三千道藏/media/b1258fb46d4aafce3e86b8236d686200.jpg)
 
 Kafka 0.9 版本之前，consumer 默认将 offset 保存在 Zookeeper 中，从 0.9 版本开始， consumer 默认将 offset 保存在 Kafka 一个内置的 topic 中，该 topic 为**\_\_consumer_offsets**。
 
@@ -936,7 +935,7 @@ export KE_HOME=/opt/module/eagle export PATH=\$PATH:\$KE_HOME/bin
 | [xqc\@hadoop102 eagle]\$ bin/ke.sh start ... ... ... ... \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* \*\* Kafka Eagle Service has started success. Welcome, Now you can visit 'http://192.168.9.102:8048/ke' Account:admin ,Password:123456 \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* \*\* \<Usage\> ke.sh [start\|status\|stop\|restart\|stats] \</Usage\> \<Usage\> https://www.kafka-eagle.org/ \</Usage\> |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-![](media/5a96b829e90888271e4f44bc30edcffc.png)
+![](../../4三千道藏/media/5a96b829e90888271e4f44bc30edcffc.png)
 
 10.启动
 
@@ -948,7 +947,7 @@ export KE_HOME=/opt/module/eagle export PATH=\$PATH:\$KE_HOME/bin
 
 <http://192.168.9.102:8048/ke> [](http://192.168.9.102:8048/ke)
 
-![](939a40156826e13736add4aa7d23ddc0.jpg))
+![](../../4三千道藏/media/939a40156826e13736add4aa7d23ddc0.jpg)
 
 # 第 6 章 Flume 对接 Kafka
 
@@ -1029,7 +1028,6 @@ Kafka 分布式的单位是 partition，同一个 partition 用一个 write ahea
 
 4.Kafka 中的分区器、序列化器、拦截器是否了解？它们之间的处理顺序是什么？
 
-![img](media/ac6e6b92-cef8-404e-8658-ec2edd772eee.png)
 
 5.Kafka 生产者客户端的整体结构是什么样子的？使用了几个线程来处理？分别是什么？
 

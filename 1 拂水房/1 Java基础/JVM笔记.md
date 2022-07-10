@@ -420,7 +420,7 @@ Writer Barrier（写屏障）
 
 G1 垃圾回收周期如下图所示
 
-![img](media/v2-956b4768abeeb780fee6a4577e9edbbb_720w.jpg)
+![img](../../4三千道藏/media/v2-956b4768abeeb780fee6a4577e9edbbb_720w.jpg)
 
 G1 的混合回收过程可以分为
 
@@ -445,7 +445,7 @@ https://www.cnblogs.com/webor2006/p/11055468.html
 
 ## （5）ZGC
 
-![img](media/v2-16e4697a52a76c8fa7aaef5f191d1581_720w.jpg)
+![img](../../4三千道藏/media/v2-16e4697a52a76c8fa7aaef5f191d1581_720w.jpg)
 
 使用了着色指针和内存屏障
 
