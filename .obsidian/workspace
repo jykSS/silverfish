@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "1 拂水房/1 Java基础/Java基础.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -33,7 +33,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "5c43a3eab7e40913c14fe60dcf45b1c1",
+                "query": "20201208223420158",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -50,8 +50,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "8454c5e00509f456",
@@ -116,6 +115,7 @@
   "active": "408ee76e5c1c2db4",
   "lastOpenFiles": [
     "1 拂水房/1 Java基础/Java基础.md",
+    "3恬裕斋/亿级流量网站架构核心技术.pdf",
     "1 拂水房/3redis笔记/redis笔记.md",
     "4三千道藏/media/8a877c23948dede5955016c726a51eff.png",
     "1 拂水房/2 MySQL，Oracle/Mysql/MySQL.md",
@@ -123,7 +123,6 @@
     "1 拂水房/2 MySQL，Oracle/Mysql/分库分表.md",
     "media/20190903074236479.png.md",
     "4三千道藏/media/642.jpg",
-    "4三千道藏/media/641.png",
-    "4三千道藏/media/image-20201208223420158.png"
+    "4三千道藏/media/641.png"
   ]
 }

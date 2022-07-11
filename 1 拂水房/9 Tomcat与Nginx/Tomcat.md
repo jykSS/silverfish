@@ -146,7 +146,7 @@ Catalina负责管理Server，而Server表示着整个服务器。Server下面有
 
 Tomcat设计了4种容器，分别是Engine、Host、Context和Wrapper。这4种容器不是平 行关系，而是父子关系。， Tomcat通过一种分层的架构，使得Servlet容器具有很好的灵 活性。
 
-![image-20210123214152448](media/image-20210123214152448.png)
+![image-20210123214152448](../../4三千道藏/media/image-20210123214152448.png)
 
 Engine 
 
