@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "408ee76e5c1c2db4",
+        "id": "c12c8793a384d459",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "1 拂水房/1 Java基础/Java基础.md",
-            "mode": "source",
+            "file": "1 拂水房/1 Java基础/JVM笔记.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -50,7 +50,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "8454c5e00509f456",
@@ -85,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 拂水房/1 Java基础/Java基础.md"
+                "file": "1 拂水房/1 Java基础/JVM笔记.md"
               }
             }
           },
@@ -95,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 拂水房/1 Java基础/Java基础.md",
+                "file": "1 拂水房/1 Java基础/JVM笔记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,17 +113,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "408ee76e5c1c2db4",
+  "active": "c12c8793a384d459",
   "lastOpenFiles": [
+    "1 拂水房/1 Java基础/JVM笔记.md",
+    "1657544612006.png.md",
     "1 拂水房/1 Java基础/Java基础.md",
+    "4三千道藏/media/1657544612006.png",
     "3恬裕斋/亿级流量网站架构核心技术.pdf",
     "1 拂水房/3redis笔记/redis笔记.md",
     "4三千道藏/media/8a877c23948dede5955016c726a51eff.png",
     "1 拂水房/2 MySQL，Oracle/Mysql/MySQL.md",
     "media/12842279-fad6a5f84672b388.png.md",
-    "1 拂水房/2 MySQL，Oracle/Mysql/分库分表.md",
-    "media/20190903074236479.png.md",
-    "4三千道藏/media/642.jpg",
-    "4三千道藏/media/641.png"
+    "1 拂水房/2 MySQL，Oracle/Mysql/分库分表.md"
   ]
 }
