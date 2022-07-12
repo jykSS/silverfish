@@ -60,9 +60,9 @@ synchronized：保证在同一时刻，只有一个线程可以执行某个方�
 可以修饰代码块，方法，静态方法，类
 
 - #### volatile
-
+  
   Volatile 是 Java 虚拟机提供的`轻量级`的同步机制（三大特性）
-
+  
   - 保证可见性
   - 不保证原子性
   - 禁止指令重排
@@ -142,7 +142,7 @@ stringBuffer. reverse()字符串反转
 Instanceof：用来指出对象是否是特定类或接口或该类子类的一个实例
 
 - #### this 与 super
-
+  
   super ：代表父类的存储空间标识(可以理解为父亲的引用)。
   this ：代表当前对象的引用(谁调用就代表谁)。
 
@@ -221,16 +221,16 @@ LongNum.inValue();
 
 基本类型与引用类型，使用基本类型在于效率，然而很多情况，会创建对象使用，因为对象可以做更多的功能，如果想要我们的基本类型像对象一样操作，就可以使用基本类型对应的包装类
 
-| 基本类型 | 对应的包装类（位于 java.lang 包中） |
-| -------- | ----------------------------------- |
-| byte     | Byte                                |
-| short    | Short                               |
-| int      | **Integer**                         |
-| long     | Long                                |
-| float    | Float                               |
-| double   | Double                              |
-| char     | **Character**                       |
-| boolean  | Boolean                             |
+| 基本类型    | 对应的包装类（位于 java.lang 包中） |
+| ------- | ----------------------- |
+| byte    | Byte                    |
+| short   | Short                   |
+| int     | **Integer**             |
+| long    | Long                    |
+| float   | Float                   |
+| double  | Double                  |
+| char    | **Character**           |
+| boolean | Boolean                 |
 
 - **装箱**：从基本类型转换为对应的包装类对象。
 
@@ -469,7 +469,7 @@ class Car { //外部类
 ```java
 FlyAble f = new FlyAble(){
     public void fly() {
-    	System.out.println("我飞了~~~");
+        System.out.println("我飞了~~~");
     }
 };
 ```
@@ -534,7 +534,7 @@ Java 接口中的成员函数默认是 public 的。抽象类的成员函数可�
 
 ```java
     int sum2 = getSum(6, 7, 2, 12, 2121);
-	//可变参数写法
+    //可变参数写法
     public static int getSum(int... arr) {
         int sum = 0;
         for (int a : arr) {
@@ -577,7 +577,6 @@ System.out.println(arr); // [I\@2ac1fdc4
 String s = Arrays.toString(arr);
 public static String toString(int[] a) ：返回指定数组内容的字符串表示形式。
    public static void sort(int[] a) ：对指定的 int 型数组按数字升序进行排序。
-
 ```
 
 ### Vector 类
@@ -655,7 +654,7 @@ Random r = new Random();
 
 int i = r.nextInt();
 
-###
+### 
 
 ### **3：ArrayList 类**
 
@@ -824,14 +823,14 @@ String str = df.format(date);
 
 常用的格式规则为：
 
-| 标识字母（区分大小写） | 含义 |
-| ---------------------- | ---- |
-| y                      | 年   |
-| M                      | 月   |
-| d                      | 日   |
-| H                      | 时   |
-| m                      | 分   |
-| s                      | 秒   |
+| 标识字母（区分大小写） | 含义  |
+| ----------- | --- |
+| y           | 年   |
+| M           | 月   |
+| d           | 日   |
+| H           | 时   |
+| m           | 分   |
+| s           | 秒   |
 
 方法：
 
@@ -873,18 +872,18 @@ Calendar cal = Calender.getInstance();
 - `public abstract void add(int field, int amount)`：根据日历的规则，为给定的日历字段添加或减去指定的时间量。
 
 - `public Date getTime()`：返回一个表示此 Calendar 时间值（从历元到现在的毫秒偏移量）的 Date 对象。
-
+  
   Calendar 类中提供很多成员常量，代表给定的日历字段：
-
-  | 字段值       | 含义                                    |
-  | ------------ | --------------------------------------- |
-  | YEAR         | 年                                      |
-  | MONTH        | 月（从 0 开始，可以+1 使用）            |
-  | DAY_OF_MONTH | 月中的天（几号）                        |
-  | HOUR         | 时（12 小时制）                         |
-  | HOUR_OF_DAY  | 时（24 小时制）                         |
-  | MINUTE       | 分                                      |
-  | SECOND       | 秒                                      |
+  
+  | 字段值          | 含义                     |
+  | ------------ | ---------------------- |
+  | YEAR         | 年                      |
+  | MONTH        | 月（从 0 开始，可以+1 使用）      |
+  | DAY_OF_MONTH | 月中的天（几号）               |
+  | HOUR         | 时（12 小时制）              |
+  | HOUR_OF_DAY  | 时（24 小时制）              |
+  | MINUTE       | 分                      |
+  | SECOND       | 秒                      |
   | DAY_OF_WEEK  | 周中的天（周几，周日为 1，可以-1 使用） |
 
 ```java
@@ -899,7 +898,6 @@ Calendar cal = Calender.getInstance();
 // 使用add方法
         cal.add(Calendar.DAY_OF_MONTH, 2); // 加2天
         cal.add(Calendar.YEAR, -3); // 减3年
-
 ```
 
 ### 10：System 类
@@ -919,13 +917,13 @@ System.out.println(System.currentTimeMillis();
 
 System.arraycopy 方法具有 5 个参数，含义分别为：
 
-| 参数序号 | 参数名称 | 参数类型 | 参数含义             |
-| -------- | -------- | -------- | -------------------- |
-| 1        | src      | Object   | 源数组               |
-| 2        | srcPos   | int      | 源数组索引起始位置   |
-| 3        | dest     | Object   | 目标数组             |
-| 4        | destPos  | int      | 目标数组索引起始位置 |
-| 5        | length   | int      | 复制元素个数         |
+| 参数序号 | 参数名称    | 参数类型   | 参数含义       |
+| ---- | ------- | ------ | ---------- |
+| 1    | src     | Object | 源数组        |
+| 2    | srcPos  | int    | 源数组索引起始位置  |
+| 3    | dest    | Object | 目标数组       |
+| 4    | destPos | int    | 目标数组索引起始位置 |
+| 5    | length  | int    | 复制元素个数     |
 
 ![4adcb6d120cd6b3542a041feb730856d.png](../../4三千道藏/media/4adcb6d120cd6b3542a041feb730856d.png)
 
@@ -967,9 +965,9 @@ Comparable 接口只包含 compareTo()方法
 Comparator 接口包含 compare（Object ，Object ）方法和 equals（）方法
 
 - ` public int compare(Object o1, Object o2)`：比较其两个参数的顺序。
-
+  
   > 两个对象比较的结果有三种：大于，等于，小于。
-  >
+  > 
   > 如果要按照升序排序，
   > 则 o1 小于 o2，返回（负数），相等返回 0，01 大于 02 返回（正数）
   > 如果要按照降序排序
@@ -1006,8 +1004,8 @@ Comparator 也可以看成一种排序算法的实现，将算法和数据分离
 ```java
 // 自然排序按照员工号的顺序
 public int compareTo(Employee obj) {
-	Employee employee = (Employee) obj;
-	return this.no - employee.no;
+    Employee employee = (Employee) obj;
+    return this.no - employee.no;
 }
 
 /*
@@ -1021,7 +1019,7 @@ public int compareTo(Employee obj) {
 public class AgeComparator implements Comparator<Employee> {
 @Override
 public int compare(Employee o1, Employee o2) {
-	return o1.getAge()-o2.getAge();
+    return o1.getAge()-o2.getAge();
 }
 }
 ```
@@ -1105,7 +1103,6 @@ Collection 是集合类的上级接口，继承于他的接口主要有 Set 和 
         //排序方法
         Collections.sort(list);
         System.out.println(list);
-
 ```
 
 ## 3.2：Iterator 迭代器
@@ -1213,49 +1210,49 @@ ArrayList 有两种方法移除元素，一种传递要删除的元素的索引�
 迭代器删除
 
 ```java
-		List<String> list = new ArrayList<>();
-		list.add("1");
-		list.add("2");
-		list.add("3");
-		//测试for循环遍历删除非最后一个
-		//问题：遗漏元素
-		//原因：遗漏元素是因为删除元素后，List的size已经减1，但i不变，则i位置元素等于被跳过，不在循环中处理。
-		//解决方法:
-		//若if代码块中调用remove函数后，加上i--，则能避免这种错误。
-		for (int i = 0; i < list.size(); i++) {
-		    System.out.println(i + ":" + list.get(i));
-		    String s = list.get(i);
-		    if ("1".equals(s)) {
-		        list.remove(s);
-		        //i--;
-		    }
-		}
-		System.out.println(list);
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("2");
+        list.add("3");
+        //测试for循环遍历删除非最后一个
+        //问题：遗漏元素
+        //原因：遗漏元素是因为删除元素后，List的size已经减1，但i不变，则i位置元素等于被跳过，不在循环中处理。
+        //解决方法:
+        //若if代码块中调用remove函数后，加上i--，则能避免这种错误。
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(i + ":" + list.get(i));
+            String s = list.get(i);
+            if ("1".equals(s)) {
+                list.remove(s);
+                //i--;
+            }
+        }
+        System.out.println(list);
 
-		//迭代器遍历
-		//安全，调用Iterator的方法
-		Iterator<String> iterator = list.iterator();
-		while (iterator.hasNext()){
-		    String str = iterator.next();
-		    System.out.println(str);
-		    if("2".equals(str)) {
-		        iterator.remove();
-		    }
-		}
-		System.out.println(list);
+        //迭代器遍历
+        //安全，调用Iterator的方法
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()){
+            String str = iterator.next();
+            System.out.println(str);
+            if("2".equals(str)) {
+                iterator.remove();
+            }
+        }
+        System.out.println(list);
 
-		//foreach遍历，删除头尾元素
-		//出错：
-		//原因：foreach实质上也是使用Iterator进行遍历。不同的地方在于，一个使用Iterator的删除方法，一个使用List的删除方法。
-		// 报错是因为remove方法改变了modCount，导致next方法时checkForComodification检查不通过，抛出异常。
-		// 移除2时正常：因为2刚好是倒数第二个元素，移除后size-1，在hasNext方法中已结束循环，不在调用next方法。虽然不报错，但会使最后一个元素被跳过，没有进入循环。
-		// 移除1或3失败略有不同：remove(3)后，size减1，cursor已经比size大1，但由于hasNext方法是 cursor!=size，还是会进入循环，在next方法中才会报错。如果hasNext方法是 cursor>size ，移除3的情形会类似于移除2(不报错，直接退出进入循环)。
-		for (String s : list) {
-		    System.out.println(s);
-		    if ("1".equals(s)) {
-		        list.remove(s);
-		    }
-		}
+        //foreach遍历，删除头尾元素
+        //出错：
+        //原因：foreach实质上也是使用Iterator进行遍历。不同的地方在于，一个使用Iterator的删除方法，一个使用List的删除方法。
+        // 报错是因为remove方法改变了modCount，导致next方法时checkForComodification检查不通过，抛出异常。
+        // 移除2时正常：因为2刚好是倒数第二个元素，移除后size-1，在hasNext方法中已结束循环，不在调用next方法。虽然不报错，但会使最后一个元素被跳过，没有进入循环。
+        // 移除1或3失败略有不同：remove(3)后，size减1，cursor已经比size大1，但由于hasNext方法是 cursor!=size，还是会进入循环，在next方法中才会报错。如果hasNext方法是 cursor>size ，移除3的情形会类似于移除2(不报错，直接退出进入循环)。
+        for (String s : list) {
+            System.out.println(s);
+            if ("1".equals(s)) {
+                list.remove(s);
+            }
+        }
 ```
 
 ### LinkedList
@@ -1542,9 +1539,9 @@ A：
 - 减少内存开销：假设使用可重入锁来获得同步支持，那么每个节点都需要通过继承 AQS 来获得同步支持。但并不是每个节点都需要同步支持，只有链表的头结点（红黑树的根节点）需要同步，这无疑带来了巨大的浪费
 
 - 获得 JVM 支持
-
+  
   可重入锁毕竟是 API 这个级别的，后续的性能优化空间 很小
-
+  
   Synchronized 则是由 JVM 直接支持，JVM 能够在运行时做出对应的优化措施：锁粗化，锁消除，锁自旋等。这就是使得 Synchronized 能够随着 JDK 版本的升级而无需改动代码的前提下获得性能上的提升。
 
 数据结构采用：Node 数组+链表+红黑树。
@@ -1632,9 +1629,9 @@ hashCode & n-1
 
 扩容两步：
 
-1.  构建一个 nextTable，大小为 table 的两倍。
+1. 构建一个 nextTable，大小为 table 的两倍。
 
-2.  把 table 的数据复制到 nextTable 中。
+2. 把 table 的数据复制到 nextTable 中。
 
 并更新 sizeCtl 的大小为新数组的 0.75 倍
 
@@ -1714,7 +1711,7 @@ HashMap 通常比 TreeMap 快一点（树和哈希表的数据结构使然），
 ```java
 System.out.println("通过Map.keySet遍历key和value：");
  **for** (String key : map.keySet()) {
- 		System.out.println("key= "+ key + " and value= " + map.get(key));
+         System.out.println("key= "+ key + " and value= " + map.get(key));
  }
 ```
 
@@ -1724,8 +1721,8 @@ System.out.println("通过Map.keySet遍历key和value：");
  System.out.println("通过Map.entrySet使用iterator遍历key和value：");
  Iterator<Map.Entry<String, String>> it = map.entrySet().iterator();
  **while** (it.hasNext()) {
- 		Map.Entry<String, String> entry = it.next();
- 		System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());
+         Map.Entry<String, String> entry = it.next();
+         System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());
  }
 ```
 
@@ -1734,7 +1731,7 @@ System.out.println("通过Map.keySet遍历key和value：");
 ```java
  System.out.println("通过Map.entrySet遍历key和value");
  **for** (Map.Entry<String, String> entry : map.entrySet()) {
- 		System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());
+         System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());
  }
 ```
 
@@ -1743,7 +1740,7 @@ System.out.println("通过Map.keySet遍历key和value：");
 ```java
 System.out.println("通过Map.values()遍历所有的value，但不能遍历key");
  **for** (String v : map.values()) {
- 		System.out.println("value= " + v);
+         System.out.println("value= " + v);
  }
 ```
 
@@ -1797,7 +1794,7 @@ Exception 和 Error 都是 Throwable 的子类。Exception 用于用户程序可
 - NoSuchMethodException 方法不存在异常
 - IOException IO 异常
 - SocketException Socket 异常
--
+- 
 
 ## 3：处理异常
 
@@ -2043,24 +2040,24 @@ public class MyDemo01 {
 输出
 
 ```
-4	  4的数据
+4      4的数据
 -----------------------------------------
-3	  3的数据
+3      3的数据
 -----------------------------------------
-2	  2的数据
+2      2的数据
 -----------------------------------------
-1	  1的数据
-0	  0的数据
+1      1的数据
+0      0的数据
 ```
 
 ThreadLocal 与 Synchronized 的区别：
 
 虽然 ThreadLocal 模式与 Synchronized 关键字都用于处理多线程并发访问变量的问题，不过两者处理问题的角度和思路不同。
 
-|        | Synchronized                                                             | ThreadLocal                                                                                  |
-| ------ | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
-| 原理   | 同步机制采用 以时间换空间的方式，只提供了一份变量，让不同的线程排队访问 | ThreadLocal 采用以空间换时间的概念，为每个线程都提供一份变量副本，从而实现同时访问而互不干扰 |
-| 侧重点 | 多个线程之间访问资源的同步                                               | 多线程中让每个线程之间的数据相互隔离                                                         |
+|     | Synchronized                         | ThreadLocal                                          |
+| --- | ------------------------------------ | ---------------------------------------------------- |
+| 原理  | 同步机制采用 以时间换空间的方式，只提供了一份变量，让不同的线程排队访问 | ThreadLocal 采用以空间换时间的概念，为每个线程都提供一份变量副本，从而实现同时访问而互不干扰 |
+| 侧重点 | 多个线程之间访问资源的同步                        | 多线程中让每个线程之间的数据相互隔离                                   |
 
 总结：在刚刚的案例中，虽然使用 ThreadLocal 和 Synchronized 都能解决问题，但是使用 ThreadLocal 更为合适，因为这样可以使程序拥有更高的并发性。
 
@@ -2089,12 +2086,12 @@ ThreadLocal 与 Synchronized 的区别：
 
 除了构造方法之外，ThreadLocal 对外暴露的方法有以下 4 个
 
-| 方法声明                   | 描述                         |
-| -------------------------- | ---------------------------- |
+| 方法声明                       | 描述             |
+| -------------------------- | -------------- |
 | protected T initialValue() | 返回当前线程局部变量的初始值 |
-| public void set(T value)   | 返回当前线程绑定的局部变量   |
-| public T get()             | 获取当前线程绑定的局部变量   |
-| public void remove()       | 移除当前线程绑定的局部变量   |
+| public void set(T value)   | 返回当前线程绑定的局部变量  |
+| public T get()             | 获取当前线程绑定的局部变量  |
+| public void remove()       | 移除当前线程绑定的局部变量  |
 
 以下是这 4 个方法的详细源码分析
 
@@ -2258,23 +2255,30 @@ RejectedExecutionHandler 接口，自定义饱和策略，如记录日志或持�
 ### 3：其他创建线程池的方法
 
 - Executors.newFixedThreadPool(int nThreads) ：创建一个拥有 i 个线程的线程池
-
+  
   - 执行长期的任务，性能好很多
   - 创建一个定长线程池，可控制线程数最大并发数，超出的线程会在队列中等待。
-
+  
   缺点：由于阻塞队列无限大，可能造成栈溢出，导致程序崩溃。
 
 - Executors.newSingleThreadExecutor：创建一个只有 1 个线程的 单线程池
+  
   - 一个任务一个任务执行的场景
   - 创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序执行
+
 - Executors.newCacheThreadPool(); 创建一个可扩容的线程池
+  
   - 执行很多短期异步的小程序或者负载教轻的服务器
   - 创建一个可缓存线程池，如果线程长度超过处理需要，可灵活回收空闲线程，如无可回收，则新建新线程
   - 处理大量短时间工作任务的线程池，他会缓存线程并重用，无缓存线程时，就会创建新线程，闲置超过 60 秒则会被移出缓存，其内部使用
     SynchronousQueue 作为工作队列；
+
 - Executors.newScheduledThreadPool(int corePoolSize)：线程池支持定时以及周期性执行任务，创建一个 corePoolSize 为传入参数，最大线程数为整形的最大数的线程池
+
 - newSingleThreadScheduledExecutor()：创建单线程池，返回 ScheduledExecutorService，可以进行定时或周期性的工作调度；new ScheduledThreadPool(int corePoolSize)：创建一个定长的线程池，可以进行定时或周期性的工作调度，区别在于单一工作线程还是多个工作线程
+
 - new WorkStealingPool(int parallelism)： Java 8 才加入这个创建方法，其内部会构建 ForkJoinPool，利用 Work-Stealing 算法，并行地处理任务，不保证处理顺序；
+
 - ThreadPoolExecutor()：是最原始的线程池创建，上面 1-3 创建方式都是对 ThreadPoolExecutor 的封装。
 
 ### 4：方法
@@ -2462,6 +2466,7 @@ notifyAll()
 Java 中提供了同步机制(synchronized)来解决
 
 - **同步代码块。**
+
 - **同步方法：**
 
 - **锁机制。**
@@ -2470,7 +2475,7 @@ Java 中提供了同步机制(synchronized)来解决
 
 ```java
 synchronized(同步锁){
-	需要同步操作的代码
+    需要同步操作的代码
 }
 ```
 
@@ -2486,7 +2491,7 @@ synchronized(同步锁){
 
 ```java
 public synchronized void method(){
-	可能会产生线程安全问题的代码
+    可能会产生线程安全问题的代码
 }
 ```
 
@@ -2876,13 +2881,11 @@ AQS 等也是用来 CAS 算法，unsafe 类是 CAS 的核心类，原子等无�
 但是它设置了限制，不让上层开发者使用，可以通过反射进行获取，
 
 ```java
-
-	 // 对于使用不安全的操作，一个比较推荐的语法：
+     // 对于使用不安全的操作，一个比较推荐的语法：
       class MyTrustedClass {
         private static final Unsafe unsafe = Unsafe.getUnsafe();
        private long myCountAddress = ...;
         public int getCount() { return unsafe.getByte(myCountAddress); }
-
 ```
 
 方法声明为 native
@@ -2905,7 +2908,7 @@ AQS 等也是用来 CAS 算法，unsafe 类是 CAS 的核心类，原子等无�
 
 6：Condition 控制线程通信
 
-###
+### 
 
 8：**线程 8 锁**
 
@@ -4071,15 +4074,15 @@ TreeSet<Integer> set = new TreeSet<>(new Comparator<Integer>() {
 **语法 1：无参无返回值**
 
 ```java
-		//语法一：无参无返回值
-		Runnable runnable = new Runnable() {
-			@Override
-			public void run() {
-				System.out.println("输出某些东西");
-			}
-		};
-		//简化实现
-		Runnable runnable1 = ()->System.out.println("输出某些东西");
+        //语法一：无参无返回值
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("输出某些东西");
+            }
+        };
+        //简化实现
+        Runnable runnable1 = ()->System.out.println("输出某些东西");
 ```
 
 注意：匿名内部类使用外部的变量必须为 final，无法改变，即使没有声明，也是 final 的
@@ -4088,32 +4091,31 @@ TreeSet<Integer> set = new TreeSet<>(new Comparator<Integer>() {
 
 ```java
 //语法二：有一个参数，无返回值
-		Consumer<String> com = new Consumer<String>() {
-			@Override
-			public void accept(String s) {
-				System.out.println(s);
-			}
-		};
-		//简化实现
-		//如果只有一个参数，(x)也可以直接写成x
-		Consumer<String> com1 = (x)->{System.out.println(x);};
-		com1.accept("有一个参数，无返回值,输出参数");
-
+        Consumer<String> com = new Consumer<String>() {
+            @Override
+            public void accept(String s) {
+                System.out.println(s);
+            }
+        };
+        //简化实现
+        //如果只有一个参数，(x)也可以直接写成x
+        Consumer<String> com1 = (x)->{System.out.println(x);};
+        com1.accept("有一个参数，无返回值,输出参数");
 ```
 
 **语法三：多个参数，有返回值，多条执行语句**
 
 ```java
 //语法三：多个参数，有返回值，多条执行语句
-		Comparator<Integer> com2 = (x,y)->{
-			System.out.println("执行某些操作");
-			return Integer.compare(x,y);
-		};
-		//如果只有一条语句，return 和大括号都可以省略
-		Comparator<Integer> com3 = (x,y)->Integer.compare(x,y);
-		//语法六：参数指定类型
-		//语法三依然可以执行，是因为JVM的上下文推断
-		Comparator<Integer> com4 = (Integer x ,Integer y)->Integer.compare(x,y);
+        Comparator<Integer> com2 = (x,y)->{
+            System.out.println("执行某些操作");
+            return Integer.compare(x,y);
+        };
+        //如果只有一条语句，return 和大括号都可以省略
+        Comparator<Integer> com3 = (x,y)->Integer.compare(x,y);
+        //语法六：参数指定类型
+        //语法三依然可以执行，是因为JVM的上下文推断
+        Comparator<Integer> com4 = (Integer x ,Integer y)->Integer.compare(x,y);
 ```
 
 ### 1.3：四大内置函数
@@ -4263,7 +4265,6 @@ Stream<Integer> stream = Stream.iterate(0,(x)->x+2);
 Stream.limit(10).forEach(System.out::println);
 //生成
 Stream.generate(()->Math.random())
-
 ```
 
 ### 2.2：中间操作
@@ -4280,20 +4281,20 @@ Filter 与谓词逻辑
 //创建Employee类，并创建10个对象
 List<Employee> employees = Arrays.asList(e1,e2,e3,e4,e5,e6,e7,e8);
 List<Employee> employeeList = employees.stream()
-    									.filter(e->e.getAge()>70 && e.getGender = 'M')
-    									.collect(Collectors.toList());
+                                        .filter(e->e.getAge()>70 && e.getGender = 'M')
+                                        .collect(Collectors.toList());
 ```
 
 limit(n);截断流，使元素不超过给定数量
 
 ```java
 employee.stream()
-    	.filter((e)->{
+        .filter((e)->{
             System.out.println("!!");
             return e.getSalary()>5000;
         })
-    	.limit(2)
-    	.forEach(System.out::println);
+        .limit(2)
+        .forEach(System.out::println);
 //发现只执行两次，主要满足2个条件就就此截断
 ```
 
@@ -4355,8 +4356,7 @@ public static main(String[] args){
 使用 flatMap
 
 ```java
-Stream<Character> sm = list.stream()   						.flatMap(this::filterCharacter);
-
+Stream<Character> sm = list.stream()                           .flatMap(this::filterCharacter);
 ```
 
 #### 2.2.3：排序
@@ -4387,10 +4387,10 @@ emp.stream()
 ```java
 List<String> nameStrs = Arrays.asList("Monkey","Lion","Giraffe","Lemur");
 List<String> list = nameStrs.stream()
-    						.filter(s->s.startsWith("L"))//过滤以L开头的
-    						.map(String::toUpperCase)//map即对每个数据进行处理：调用String类的toUpperCase方法
-    						.sorted()//排序
-    						.collect(toList());//转换为list
+                            .filter(s->s.startsWith("L"))//过滤以L开头的
+                            .map(String::toUpperCase)//map即对每个数据进行处理：调用String类的toUpperCase方法
+                            .sorted()//排序
+                            .collect(toList());//转换为list
 
 //数组转换成流
 String[] nameStrs1 = {"Monkey","Lion","Giraffe","Lemur"};
@@ -4402,8 +4402,7 @@ Set<String> set = new HashSet<>(nameStrs);
 set.stream().filter(……)
 
 //文件
-	Stream<String> stringStream = Files.lines(Paths.get("file.txt"));
-
+    Stream<String> stringStream = Files.lines(Paths.get("file.txt"));
 ```
 
 遍历二维数组
@@ -4430,7 +4429,7 @@ set.stream().filter(……)
         }
 ```
 
-####
+#### 
 
 有状态操作
 
@@ -4478,7 +4477,7 @@ anyMatch——检查是否至少匹配一个元素
 ```java
 //是否存在状态为BUSY的元素
 boolean b = emplist.stream()
-    		.anyMatch((e)->e.getStatus().equals(Status.BUSY));
+            .anyMatch((e)->e.getStatus().equals(Status.BUSY));
 ```
 
 noneMatch——检查是否没有匹配所有元素
@@ -4486,7 +4485,7 @@ noneMatch——检查是否没有匹配所有元素
 ```java
 //是否没有状态为BUSY的元素
 boolean b = emplist.stream()
-    		.noneMatch((e)->e.getStatus().equals(Status.BUSY));
+            .noneMatch((e)->e.getStatus().equals(Status.BUSY));
 ```
 
 findFirst——返回第一个元素
@@ -4494,7 +4493,7 @@ findFirst——返回第一个元素
 ```java
 //工资最高的
 Optional<Employee> op = emplist.stream()
-    	.sorted((e1,e2)->Double.compare(e1.getSalary(),e2.getSalary()))
+        .sorted((e1,e2)->Double.compare(e1.getSalary(),e2.getSalary()))
     .findFirst();
 ```
 
@@ -4713,14 +4712,14 @@ LocalDateTime plus = parse.plus(1L, ChronoUnit.HOURS); // 2019-10-17T17:54:50.94
 // LocalDateTime plus(TemporalAmount amountToAdd)：在该时间基础上增加一定时间
 LocalDateTime plus1 = parse.plus(Period.ofDays(1)); // 2019-10-18T16:54:50.941
 LocalDateTime plus2 = parse.plusDays(1L); // 2019-10-18T16:54:50.941
-		// LocalDateTime    plusDays(long days)：增加指定天数
-        // LocalDateTime	plusHours(long hours)：增加指定小时数
-        // LocalDateTime	plusMinutes(long minutes)：增加指定分钟数
-        // LocalDateTime	plusMonths(long months)：增加指定月份数
-        // LocalDateTime	plusNanos(long nanos)：增加指定毫秒数
-        // LocalDateTime	plusSeconds(long seconds):增加指定秒数
-        // LocalDateTime	plusWeeks(long weeks):增加指定周数
-        // LocalDateTime	plusYears(long years):增加指定年数
+        // LocalDateTime    plusDays(long days)：增加指定天数
+        // LocalDateTime    plusHours(long hours)：增加指定小时数
+        // LocalDateTime    plusMinutes(long minutes)：增加指定分钟数
+        // LocalDateTime    plusMonths(long months)：增加指定月份数
+        // LocalDateTime    plusNanos(long nanos)：增加指定毫秒数
+        // LocalDateTime    plusSeconds(long seconds):增加指定秒数
+        // LocalDateTime    plusWeeks(long weeks):增加指定周数
+        // LocalDateTime    plusYears(long years):增加指定年数
 ```
 
 //获取拆分
@@ -4869,7 +4868,6 @@ jshell 直接隐藏处理了
 
 ```java
 //声明私有方法
-
 ```
 
 抽象类和接口的异同
@@ -5385,11 +5383,11 @@ G1 收集器必须完成收集集合的所有区域中的所有活动对象之�
 ```java
 String x = "3";
 int i = switch (x) {
-	case "1" -> 1;
-	case "2" -> 2;
-	default -> {
-		yield 3;
-	}
+    case "1" -> 1;
+    case "2" -> 2;
+    default -> {
+        yield 3;
+    }
 };
 System.out.println(i);
 ```
@@ -5417,14 +5415,14 @@ String html1 = """
                 <p>Hello, world</p>
                 </body>
                 </html>
-			  """;
+              """;
 //JDK13的SQL拼接
 String newQuery = """
                 select employee_id,last_name,salary,department_id
                 from employees
                 where department_id in (40,50,60)
                 order by department_id asc
-				""";
+                """;
 ```
 
 开始分隔符是由三个双引号字符（"""），后面可以跟零个或多个空格，最终以行终止符结束。文本块内容
@@ -5443,8 +5441,8 @@ String newQuery = """
 ```java
 //错误
 String d = """
-			abc \ def
-			"""; // 含有未转义的反斜线
+            abc \ def
+            """; // 含有未转义的反斜线
 ```
 
 文本框连接
@@ -5453,9 +5451,9 @@ String d = """
 String code = """
         public void print(""" + type + """
             o) {
-            	System.out.println(Objects.toString(o));
+                System.out.println(Objects.toString(o));
             }
-		""";
+        """;
 ```
 
 更简洁的替代方法是使用 String :: replace 或 String :: format，比如：
@@ -5463,14 +5461,14 @@ String code = """
 ```java
 String code = """
         public void print($type o) {
-        	System.out.println(Objects.toString(o));
+            System.out.println(Objects.toString(o));
         }
-		""".replace("$type", type);
+        """.replace("$type", type);
 String code = String.format("""
         public void print(%s o) {
-        	System.out.println(Objects.toString(o));
+            System.out.println(Objects.toString(o));
         }
-		""", type);
+        """, type);
 ```
 
 另一个方法是使用 String :: formatted，这是一个新方法，比如：
@@ -5478,9 +5476,9 @@ String code = String.format("""
 ```java
 String source = """
         public void print(%s object) {
-        	System.out.println(Objects.toString(object));
+            System.out.println(Objects.toString(object));
         }
-		""".formatted(type);
+        """.formatted(type);
 ```
 
 ## 3：动态 CDS 档案（动态类数据共享归档）

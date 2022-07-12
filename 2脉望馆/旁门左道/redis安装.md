@@ -168,7 +168,7 @@ cp /root/redis-3.0.0/redis.conf ./
 使用默认配置：默认的 ip【127.0.0.1】，默认的 port【6379】
 
 - 关闭
-
+  
   Ctrl + c 或则输入 Quit
 
 ## 3.2：图形界面客户端
@@ -221,7 +221,6 @@ public void jedisclient (){
     //关闭jedis
     jedis.close ();
 }
-
 ```
 
 ### 使用 jedis 连接池连接 redis 服务器
@@ -240,7 +239,6 @@ public void jedisPool() {
     //关闭连接池
     pool.close () ;
 }
-
 ```
 
 ### Spring 整合 jedisPool（自学）
@@ -251,75 +249,73 @@ public void jedisPool() {
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
-		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
-		http://www.springframework.org/schema/mvc
-		http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
-		http://www.springframework.org/schema/context
-		http://www.springframework.org/schema/context/spring-context-3.2.xsd
-		http://www.springframework.org/schema/aop
-		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
-		http://www.springframework.org/schema/tx
-		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd ">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-3.2.xsd ">
 
-	<!-- 连接池配置 -->
-	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
-		<!-- 最大连接数 -->
-		<property name="maxTotal" value="30" />
-		<!-- 最大空闲连接数 -->
-		<property name="maxIdle" value="10" />
-		<!-- 每次释放连接的最大数目 -->
-		<property name="numTestsPerEvictionRun" value="1024" />
-		<!-- 释放连接的扫描间隔（毫秒） -->
-		<property name="timeBetweenEvictionRunsMillis" value="30000" />
-		<!-- 连接最小空闲时间 -->
-		<property name="minEvictableIdleTimeMillis" value="1800000" />
-		<!-- 连接空闲多久后释放, 当空闲时间>该值 且 空闲连接>最大空闲连接数 时直接释放 -->
-		<property name="softMinEvictableIdleTimeMillis" value="10000" />
-		<!-- 获取连接时的最大等待毫秒数,小于零:阻塞不确定的时间,默认-1 -->
-		<property name="maxWaitMillis" value="1500" />
-		<!-- 在获取连接的时候检查有效性, 默认false -->
-		<property name="testOnBorrow" value="false" />
-		<!-- 在空闲时检查有效性, 默认false -->
-		<property name="testWhileIdle" value="true" />
-		<!-- 连接耗尽时是否阻塞, false报异常,ture阻塞直到超时, 默认true -->
-		<property name="blockWhenExhausted" value="false" />
-	</bean>
+    <!-- 连接池配置 -->
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <!-- 最大连接数 -->
+        <property name="maxTotal" value="30" />
+        <!-- 最大空闲连接数 -->
+        <property name="maxIdle" value="10" />
+        <!-- 每次释放连接的最大数目 -->
+        <property name="numTestsPerEvictionRun" value="1024" />
+        <!-- 释放连接的扫描间隔（毫秒） -->
+        <property name="timeBetweenEvictionRunsMillis" value="30000" />
+        <!-- 连接最小空闲时间 -->
+        <property name="minEvictableIdleTimeMillis" value="1800000" />
+        <!-- 连接空闲多久后释放, 当空闲时间>该值 且 空闲连接>最大空闲连接数 时直接释放 -->
+        <property name="softMinEvictableIdleTimeMillis" value="10000" />
+        <!-- 获取连接时的最大等待毫秒数,小于零:阻塞不确定的时间,默认-1 -->
+        <property name="maxWaitMillis" value="1500" />
+        <!-- 在获取连接的时候检查有效性, 默认false -->
+        <property name="testOnBorrow" value="false" />
+        <!-- 在空闲时检查有效性, 默认false -->
+        <property name="testWhileIdle" value="true" />
+        <!-- 连接耗尽时是否阻塞, false报异常,ture阻塞直到超时, 默认true -->
+        <property name="blockWhenExhausted" value="false" />
+    </bean>
 
-	<!-- redis单机 通过连接池 -->
-	<bean id="jedisPool" class="redis.clients.jedis.JedisPool"
-		destroy-method="close">
-		<constructor-arg name="poolConfig" ref="jedisPoolConfig" />
-		<constructor-arg name="host" value="192.168.242.130" />
-		<constructor-arg name="port" value="6379" />
-	</bean>
+    <!-- redis单机 通过连接池 -->
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool"
+        destroy-method="close">
+        <constructor-arg name="poolConfig" ref="jedisPoolConfig" />
+        <constructor-arg name="host" value="192.168.242.130" />
+        <constructor-arg name="port" value="6379" />
+    </bean>
 </beans>
-
 ```
 
 - 测试代码
 
 ```java
-	@Test
-	public void testJedisPool() {
-		JedisPool pool = (JedisPool) applicationContext.getBean("jedisPool");
-		Jedis jedis = null;
-		try {
-			jedis = pool.getResource();
-			jedis.set("name", "lisi");
-			String name = jedis.get("name");
-			System.out.println(name);
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		} finally {
-			if (jedis != null) {
-				// 关闭连接
-				jedis.close();
-			}
-		}
-	}
-
+    @Test
+    public void testJedisPool() {
+        JedisPool pool = (JedisPool) applicationContext.getBean("jedisPool");
+        Jedis jedis = null;
+        try {
+            jedis = pool.getResource();
+            jedis.set("name", "lisi");
+            String name = jedis.get("name");
+            System.out.println(name);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        } finally {
+            if (jedis != null) {
+                // 关闭连接
+                jedis.close();
+            }
+        }
+    }
 ```
