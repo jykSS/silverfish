@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "1 拂水房/1 Java基础/JVM笔记.md",
-            "mode": "preview",
+            "file": "1 拂水房/5 Spring/1 Spring框架.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -33,7 +33,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "20201208223420158",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -46,12 +46,21 @@
             "id": "e7a1992bb2a69f7e",
             "type": "leaf",
             "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2022-08-02 21.31.01.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "9e87baf11407290c",
+            "type": "leaf",
+            "state": {
               "type": "file-explorer",
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "8454c5e00509f456",
@@ -70,7 +79,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 485
+    "width": 367.5,
+    "collapsed": true
   },
   "right": {
     "id": "07860fe6748ee06b",
@@ -86,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 拂水房/1 Java基础/JVM笔记.md"
+                "file": "1 拂水房/5 Spring/1 Spring框架.md"
               }
             }
           },
@@ -96,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 拂水房/1 Java基础/JVM笔记.md",
+                "file": "1 拂水房/5 Spring/1 Spring框架.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,15 +125,15 @@
   },
   "active": "c12c8793a384d459",
   "lastOpenFiles": [
-    "1 拂水房/1 Java基础/JVM笔记.md",
-    "1657544612006.png.md",
-    "1 拂水房/1 Java基础/Java基础.md",
-    "4三千道藏/media/1657544612006.png",
-    "3恬裕斋/亿级流量网站架构核心技术.pdf",
-    "1 拂水房/3redis笔记/redis笔记.md",
-    "4三千道藏/media/8a877c23948dede5955016c726a51eff.png",
-    "1 拂水房/2 MySQL，Oracle/Mysql/MySQL.md",
-    "media/12842279-fad6a5f84672b388.png.md",
-    "1 拂水房/2 MySQL，Oracle/Mysql/分库分表.md"
+    "1 拂水房/10 面经/阿里文娱.md",
+    "1 拂水房/10 面经/2019java面试分模块总结.md",
+    "1 拂水房/10 面经/2019顺丰面经.md",
+    "1 拂水房/10 面经/2019美团面经.md",
+    "1 拂水房/10 面经/2019京东面经.md",
+    "1 拂水房/10 面经/2019京东金融面经.md",
+    "1 拂水房/10 面经/2019滴滴面经.md",
+    "1 拂水房/10 面经/2019菜鸟快递面经.md",
+    "1 拂水房/10 面经/2019百度面经.md",
+    "1 拂水房/10 面经/2019阿里淘系面试.md"
   ]
 }
