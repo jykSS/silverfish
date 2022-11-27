@@ -1,8 +1,8 @@
 {
   "commitMessage": "vault backup: {{date}}",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
-  "autoSaveInterval": 10,
-  "autoPullInterval": 10,
+  "autoSaveInterval": 30,
+  "autoPullInterval": 30,
   "autoPullOnBoot": true,
   "disablePush": true,
   "pullBeforePush": true,
@@ -10,5 +10,5 @@
   "listChangedFilesInMessageBody": true,
   "showStatusBar": true,
   "updateSubmodules": false,
-  "gitPath": "git@github.com:jykSS/silverfish.git"
+  "gitPath": ""
 }
