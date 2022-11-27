@@ -49,4 +49,4 @@
   git clone https://github.com/jykSS/silverfish.git
 ```
 用Obsidian直接打开
-# [博客地址](http://jykss.xyz/)  
+# [博客地址](http://blog.jykss.top/)  
