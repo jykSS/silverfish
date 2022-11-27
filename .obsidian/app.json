@@ -16,10 +16,14 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "useMarkdownLinks": true,
+  "useMarkdownLinks": false,
   "newLinkFormat": "relative",
   "newFileLocation": "current",
   "showUnsupportedFiles": true,
   "legacyEditor": false,
-  "livePreview": true
+  "livePreview": true,
+  "spellcheckLanguages": [
+    "zh-CN",
+    "en-US"
+  ]
 }
