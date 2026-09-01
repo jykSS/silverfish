@@ -22,8 +22,5 @@
   "showUnsupportedFiles": true,
   "legacyEditor": false,
   "livePreview": true,
-  "spellcheckLanguages": [
-    "zh-CN",
-    "en-US"
-  ]
+  "spellcheckLanguages": null
 }
